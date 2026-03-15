@@ -1,67 +1,138 @@
 {
-  "pageTitle": "Lit Technologies Case Study — Rahul Antony",
-  "navTitle": "Lit Technologies Case Study",
-  "heroLabel": "Case Study · 2018–2021",
-  "heroTitle": "Lit Technologies → Udaan: Building a B2B Commerce Platform from Scratch",
-  "heroDesc": "From concept to acquisition — owning product design, category strategy, and operational readiness for a kirana-focused M-commerce marketplace in Trivandrum, Kerala.",
   "heroStats": [
-    { "value": "₹55Cr+", "label": "Total GMV (inc. Udaan)" },
-    { "value": "3,258", "label": "Kirana Stores" },
-    { "value": "1,700", "label": "SKUs · 20 Categories" },
-    { "value": "94.6%", "label": "Fulfilment Rate" },
-    { "value": "100%", "label": "User Retention at Migration" }
+    {
+      "value": "₹55Cr+",
+      "label": "Total GMV (inc. Udaan)"
+    },
+    {
+      "value": "3,258",
+      "label": "Kirana Stores"
+    },
+    {
+      "value": "1,700",
+      "label": "SKUs · 20 Categories"
+    },
+    {
+      "value": "94.6%",
+      "label": "Fulfilment Rate"
+    },
+    {
+      "value": "100%",
+      "label": "User Retention at Migration"
+    }
   ],
-
-  "context": {
-    "para1": "Lit Technologies was an M-commerce marketplace established in December 2017, serving kirana stores and HoReCa clients in Trivandrum, Kerala. The model was simple but operationally complex — store owners placed orders through the app before 7pm, and goods were delivered the next working day.",
-    "para2": "As Head of Design, I led the overall development of the brand, platform, customer support, and post-sales experience. The role was roughly split: 40% product design (UI/UX), 40% sales and brand management, and 20% customer relations — essentially building every customer-facing touchpoint from the ground up."
-  },
-
+  "pageTitle": "Lit Technologies Case Study — Rahul Antony",
+  "heroDesc": "From concept to acquisition - owning product design and customer relations for a kirana-focused e-commerce marketplace in Trivandrum, Kerala.",
   "consumerApp": {
     "title": "B2B Consumer Ordering App",
-    "para1": "Designed and iterated the B2B ordering app for kirana stores. The user base was predominantly local language speakers (70%+), which shaped every design decision — from simplified navigation to vernacular-first communication.",
+    "para1": "Designed and iterated the B2B ordering app for kirana stores. The user base was predominantly local language speakers (70%+), which shaped every design decision - from simplified navigation to vernacular-first communication.",
     "para2": "The app grew from 89 installs at launch (April 2018) to 5,000+ installs with 1,900+ monthly active orderers by December 2020, through continuous iteration based on user interviews and in-field testing.",
     "galleryLabel": "Consumer App — User Journey",
     "screenshots": [
-      { "src": "/assets/images/consumer-app/slide07_img02.png", "alt": "Home Screen", "caption": "Home Screen" },
-      { "src": "/assets/images/consumer-app/slide09_img02.png", "alt": "All Categories", "caption": "All Categories" },
-      { "src": "/assets/images/consumer-app/slide10_img01.png", "alt": "Category Listing", "caption": "Category Listing" },
-      { "src": "/assets/images/consumer-app/slide11_img01.png", "alt": "Product Listing", "caption": "Products · Deals & OOS" },
-      { "src": "/assets/images/consumer-app/slide12_img01.png", "alt": "Product Detail", "caption": "Product Detail" },
-      { "src": "/assets/images/consumer-app/slide13_img01.png", "alt": "Cart", "caption": "Cart / Checkout" },
-      { "src": "/assets/images/consumer-app/slide14_img01.png", "alt": "Offers", "caption": "Offers Page" },
-      { "src": "/assets/images/consumer-app/slide15_img01.png", "alt": "Orders", "caption": "Orders & History" }
+      {
+        "src": "/assets/images/consumer-app/slide07_img02.png",
+        "alt": "Home Screen",
+        "caption": "Home Screen"
+      },
+      {
+        "src": "/assets/images/consumer-app/slide09_img02.png",
+        "alt": "All Categories",
+        "caption": "All Categories"
+      },
+      {
+        "src": "/assets/images/consumer-app/slide10_img01.png",
+        "alt": "Category Listing",
+        "caption": "Category Listing"
+      },
+      {
+        "src": "/assets/images/consumer-app/slide11_img01.png",
+        "alt": "Product Listing",
+        "caption": "Products · Deals & OOS"
+      },
+      {
+        "src": "/assets/images/consumer-app/slide12_img01.png",
+        "alt": "Product Detail",
+        "caption": "Product Detail"
+      },
+      {
+        "src": "/assets/images/consumer-app/slide13_img01.png",
+        "alt": "Cart",
+        "caption": "Cart / Checkout"
+      },
+      {
+        "src": "/assets/images/consumer-app/slide14_img01.png",
+        "alt": "Offers",
+        "caption": "Offers Page"
+      },
+      {
+        "src": "/assets/images/consumer-app/slide15_img01.png",
+        "alt": "Orders",
+        "caption": "Orders & History"
+      }
     ]
   },
-
   "deliveryApp": {
     "title": "Internal Delivery & Routing App",
-    "description": "Designed the internal operations suite — a delivery management app used by drivers to execute daily routes, manage store-level deliveries, capture cash reconciliation, and handle returns. The system tracked over 12 million kgs of goods delivered in under 28 months.",
+    "description": "Designed the internal operations suite - a delivery management app used by drivers to execute daily routes, manage store-level deliveries, capture cash reconciliation, and handle returns. The system tracked over 12 million kgs of goods delivered in under 28 months.",
     "galleryLabel": "Delivery App — Operations Flow",
     "screenshots": [
-      { "src": "/assets/images/delivery-app/slide18_img01.png", "alt": "Routes", "caption": "Routes Assignment" },
-      { "src": "/assets/images/delivery-app/slide19_img01.png", "alt": "Store List", "caption": "Store List per Route" },
-      { "src": "/assets/images/delivery-app/slide20_img01.png", "alt": "Route Map", "caption": "Google Maps Routing" },
-      { "src": "/assets/images/delivery-app/slide17_img02.png", "alt": "Store Task", "caption": "Store Task View" },
-      { "src": "/assets/images/delivery-app/slide21_img01.png", "alt": "Task Detail", "caption": "Item-Level Delivery" },
-      { "src": "/assets/images/delivery-app/slide21_img02.png", "alt": "Payment", "caption": "Payment Capture" },
-      { "src": "/assets/images/delivery-app/slide22_img01.png", "alt": "Status", "caption": "Delivery Status" },
-      { "src": "/assets/images/delivery-app/slide22_img02.png", "alt": "Returns", "caption": "Partial Return Flow" }
+      {
+        "src": "/assets/images/delivery-app/slide18_img01.png",
+        "alt": "Routes",
+        "caption": "Routes Assignment"
+      },
+      {
+        "src": "/assets/images/delivery-app/slide19_img01.png",
+        "alt": "Store List",
+        "caption": "Store List per Route"
+      },
+      {
+        "src": "/assets/images/delivery-app/slide20_img01.png",
+        "alt": "Route Map",
+        "caption": "Google Maps Routing"
+      },
+      {
+        "src": "/assets/images/delivery-app/slide17_img02.png",
+        "alt": "Store Task",
+        "caption": "Store Task View"
+      },
+      {
+        "src": "/assets/images/delivery-app/slide21_img01.png",
+        "alt": "Task Detail",
+        "caption": "Item-Level Delivery"
+      },
+      {
+        "src": "/assets/images/delivery-app/slide21_img02.png",
+        "alt": "Payment",
+        "caption": "Payment Capture"
+      },
+      {
+        "src": "/assets/images/delivery-app/slide22_img01.png",
+        "alt": "Status",
+        "caption": "Delivery Status"
+      },
+      {
+        "src": "/assets/images/delivery-app/slide22_img02.png",
+        "alt": "Returns",
+        "caption": "Partial Return Flow"
+      }
     ]
   },
-
-  "video": {
-    "title": "Platform in Action",
-    "youtubeId": "dQw4w9WgXcQ",
-    "caption": "Lit Technologies — A kirana store owner placing an order through the platform"
+  "acquisition": {
+    "title": "Acquisition & Migration to Udaan",
+    "para1": "In October 2020, Lit Technologies was acquired by Udaan - India's largest B2B trade platform. Post-acquisition, led the platform migration, achieving 100% user retention, launched Udaan in Kochi within three months, and onboarded major FMCG brand,s including HUL, Coke, Nestle, P&G, PepsiCo, and Reckitt.",
+    "para2": "The acquisition validated the platform's approach - the simplified app workflow designed for local language speakers at Lit Technologies directly informed adaptations made to the Udaan platform for the Kerala market."
   },
-
+  "context": {
+    "para1": "Lit Technologies was an e-commerce marketplace established in December 2017, serving kirana stores and HoReCa clients in Trivandrum, Kerala. The model was simple but operationally complex - store owners placed orders through the app before 7 pm, and goods were delivered the next working day.",
+    "para2": "As Head of Design, I led the overall development of the brand, platform, customer support, and post-sales experience. The role was roughly split: 40% product design (UI/UX), 40% sales and brand management, and 20% customer relations - essentially building every customer-facing touchpoint from the ground up."
+  },
   "dashboard": {
     "title": "Sales Analytics Dashboard",
-    "description": "Built from actual operational data covering March 2018 to May 2020 — the Lit Technologies period. The dashboard shows revenue trends, category performance, customer segmentation, return analysis, and margin structure across 319K+ line items.",
+    "description": "Built from actual operational data covering March 2018 to May 2020 - the Lit Technologies period. The dashboard shows revenue trends, category performance, customer segmentation, return analysis, and margin structure across 319K+ line items.",
     "note": "This dashboard reflects Lit Technologies operational data (Mar 2018 – May 2020). The total GMV of ₹55Cr+ includes the post-acquisition Udaan period through October 2020."
   },
-
+  "navTitle": "Lit Technologies Case Study",
   "thirdPartyProjects": [
     {
       "image": "/assets/images/third-party/hhys-crm.png",
@@ -78,10 +149,11 @@
       "linkText": "View Figma Prototype →"
     }
   ],
-
-  "acquisition": {
-    "title": "Acquisition & Migration to Udaan",
-    "para1": "In October 2020, Lit Technologies was acquired by Udaan — India's largest B2B trade platform. Post-acquisition, led the platform migration achieving 100% user retention, launched Udaan in Kochi within three months, and onboarded major FMCG brands including HUL, Coke, Nestle, P&G, PepsiCo, and Reckitt.",
-    "para2": "The acquisition validated the platform's approach — the simplified app workflow designed for local language speakers at Lit Technologies directly informed adaptations made to the Udaan platform for the Kerala market."
-  }
+  "heroLabel": "Case Study · 2018–2021",
+  "video": {
+    "title": "Platform in Action",
+    "youtubeId": "dQw4w9WgXcQ",
+    "caption": "Lit Technologies — A kirana store owner placing an order through the platform"
+  },
+  "heroTitle": "Lit Technologies → Udaan: Building a B2B Commerce Platform from Scratch"
 }
