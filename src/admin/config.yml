@@ -275,3 +275,172 @@ collections:
               - { name: "title", label: "Degree Title", widget: "string" }
               - { name: "institution", label: "Institution & Year", widget: "string" }
           - { name: "tools", label: "Tools & Platforms", widget: "list", field: { name: "tool", label: "Tool Name", widget: "string" } }
+
+  # ═══════════ ONDC CASE STUDY PAGE ═══════════
+  - name: "ondcPage"
+    label: "ONDC Case Study Page"
+    files:
+      - name: "ondcPage"
+        label: "ONDC Page Content"
+        file: "src/_data/ondcPage.json"
+        fields:
+          - { name: "pageTitle", label: "Browser Tab Title", widget: "string" }
+          - { name: "navTitle", label: "Nav Bar Title", widget: "string" }
+          - { name: "heroLabel", label: "Hero Label (e.g. Case Study · Oct 2022...)", widget: "string" }
+          - { name: "heroTitle", label: "Hero Title", widget: "string" }
+          - { name: "heroDesc", label: "Hero Description", widget: "text" }
+          - name: "roleEvolution"
+            label: "Role Evolution Section"
+            widget: "object"
+            fields:
+              - { name: "para1", label: "Paragraph 1 (supports HTML bold)", widget: "text" }
+              - { name: "para2", label: "Paragraph 2", widget: "text" }
+          - name: "phase1Initiatives"
+            label: "Phase 1 — Digital Infrastructure"
+            widget: "list"
+            fields:
+              - { name: "icon", label: "Icon (emoji)", widget: "string" }
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description (supports HTML)", widget: "text" }
+              - name: "metrics"
+                label: "Metrics"
+                widget: "list"
+                required: false
+                fields:
+                  - { name: "value", label: "Value", widget: "string" }
+                  - { name: "label", label: "Label", widget: "string" }
+              - name: "links"
+                label: "Links"
+                widget: "list"
+                required: false
+                fields:
+                  - { name: "text", label: "Link Text", widget: "string" }
+                  - { name: "url", label: "URL", widget: "string" }
+          - name: "phase2Initiatives"
+            label: "Phase 2 — Social Impact"
+            widget: "list"
+            fields:
+              - { name: "icon", label: "Icon (emoji)", widget: "string" }
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description (supports HTML)", widget: "text" }
+              - { name: "description2", label: "Second Paragraph (optional)", widget: "text", required: false }
+              - { name: "highlighted", label: "Highlight Border?", widget: "boolean", required: false }
+              - name: "metrics"
+                label: "Metrics"
+                widget: "list"
+                required: false
+                fields:
+                  - { name: "value", label: "Value", widget: "string" }
+                  - { name: "label", label: "Label", widget: "string" }
+              - name: "links"
+                label: "Links"
+                widget: "list"
+                required: false
+                fields:
+                  - { name: "text", label: "Link Text", widget: "string" }
+                  - { name: "url", label: "URL", widget: "string" }
+          - name: "comms"
+            label: "Communications Section"
+            widget: "object"
+            fields:
+              - { name: "para1", label: "Paragraph 1 (supports HTML)", widget: "text" }
+              - { name: "para2", label: "Paragraph 2 (supports HTML)", widget: "text" }
+              - name: "links"
+                label: "Resource Links"
+                widget: "list"
+                fields:
+                  - { name: "text", label: "Link Text", widget: "string" }
+                  - { name: "url", label: "URL", widget: "string" }
+          - name: "caseStudies"
+            label: "Published Case Studies"
+            widget: "list"
+            fields:
+              - { name: "badge", label: "Publisher Name", widget: "string" }
+              - { name: "title", label: "Article Title", widget: "string" }
+              - { name: "url", label: "Article URL", widget: "string" }
+              - { name: "linkText", label: "Link Text", widget: "string" }
+
+  # ═══════════ LIT TECH CASE STUDY PAGE ═══════════
+  - name: "littechPage"
+    label: "Lit Tech Case Study Page"
+    files:
+      - name: "littechPage"
+        label: "Lit Tech Page Content"
+        file: "src/_data/littechPage.json"
+        fields:
+          - { name: "pageTitle", label: "Browser Tab Title", widget: "string" }
+          - { name: "navTitle", label: "Nav Bar Title", widget: "string" }
+          - { name: "heroLabel", label: "Hero Label", widget: "string" }
+          - { name: "heroTitle", label: "Hero Title", widget: "string" }
+          - { name: "heroDesc", label: "Hero Description", widget: "text" }
+          - name: "heroStats"
+            label: "Hero Stats"
+            widget: "list"
+            fields:
+              - { name: "value", label: "Value", widget: "string" }
+              - { name: "label", label: "Label", widget: "string" }
+          - name: "context"
+            label: "Context Section"
+            widget: "object"
+            fields:
+              - { name: "para1", label: "Paragraph 1", widget: "text" }
+              - { name: "para2", label: "Paragraph 2", widget: "text" }
+          - name: "consumerApp"
+            label: "Consumer App Gallery"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Section Title", widget: "string" }
+              - { name: "para1", label: "Paragraph 1", widget: "text" }
+              - { name: "para2", label: "Paragraph 2", widget: "text" }
+              - { name: "galleryLabel", label: "Gallery Label", widget: "string" }
+              - name: "screenshots"
+                label: "Screenshots"
+                widget: "list"
+                fields:
+                  - { name: "src", label: "Image", widget: "image" }
+                  - { name: "alt", label: "Alt Text", widget: "string" }
+                  - { name: "caption", label: "Caption", widget: "string" }
+          - name: "deliveryApp"
+            label: "Delivery App Gallery"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Section Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - { name: "galleryLabel", label: "Gallery Label", widget: "string" }
+              - name: "screenshots"
+                label: "Screenshots"
+                widget: "list"
+                fields:
+                  - { name: "src", label: "Image", widget: "image" }
+                  - { name: "alt", label: "Alt Text", widget: "string" }
+                  - { name: "caption", label: "Caption", widget: "string" }
+          - name: "video"
+            label: "YouTube Video"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "youtubeId", label: "YouTube Video ID", widget: "string", hint: "Just the ID, e.g. 9obz1Z3U-dE" }
+              - { name: "caption", label: "Caption", widget: "string" }
+          - name: "dashboard"
+            label: "Dashboard Section"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - { name: "note", label: "Disclaimer Note", widget: "text" }
+          - name: "thirdPartyProjects"
+            label: "Third Party Projects"
+            widget: "list"
+            fields:
+              - { name: "image", label: "Project Image", widget: "image" }
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - { name: "link", label: "External Link (optional)", widget: "string", required: false }
+              - { name: "linkText", label: "Link Text (optional)", widget: "string", required: false }
+          - name: "acquisition"
+            label: "Acquisition Section"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "para1", label: "Paragraph 1", widget: "text" }
+              - { name: "para2", label: "Paragraph 2", widget: "text" }

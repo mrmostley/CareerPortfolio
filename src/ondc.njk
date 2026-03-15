@@ -1,0 +1,163 @@
+---
+permalink: /ondc.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ ondcPage.pageTitle }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Libre Franklin',sans-serif;color:#1a1a2e;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:root{--accent:#c0392b;--charcoal:#1a1a2e;--text:#2c3e50;--muted:#7f8c8d;--light-bg:#f8f9fa;--border:#e8ecef;--serif:'Source Serif 4',Georgia,serif;--sans:'Libre Franklin',sans-serif;--max-w:960px}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-back{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-back:hover{color:var(--charcoal)}
+.nav-back svg{width:16px;height:16px}
+.nav-title{font-size:13px;font-weight:600;color:var(--charcoal)}
+.page-hero{padding:100px 24px 60px;background:var(--light-bg);border-bottom:1px solid var(--border)}
+.page-hero-inner{max-width:var(--max-w);margin:0 auto}
+.page-hero-label{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.page-hero h1{font-family:var(--serif);font-size:clamp(32px,4vw,44px);font-weight:700;color:var(--charcoal);margin-bottom:16px;letter-spacing:-.02em}
+.page-hero p{font-size:17px;color:var(--text);max-width:680px;line-height:1.7}
+.content{max-width:var(--max-w);margin:0 auto;padding:60px 24px}
+.content h2{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--charcoal);margin:48px 0 16px;letter-spacing:-.01em}
+.content h2:first-child{margin-top:0}
+.content h3{font-size:18px;font-weight:700;color:var(--charcoal);margin:32px 0 12px}
+.content p{font-size:15px;color:var(--text);line-height:1.8;margin-bottom:16px}
+.metric-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin:24px 0}
+.metric-card{background:var(--light-bg);border-radius:10px;padding:20px;text-align:center;border:1px solid var(--border)}
+.metric-card-num{font-size:26px;font-weight:700;color:var(--charcoal)}
+.metric-card-num span{color:var(--accent);font-size:16px}
+.metric-card-label{font-size:11px;color:var(--muted);margin-top:4px}
+.initiative{margin:32px 0;padding:24px;background:#fff;border:1px solid var(--border);border-radius:12px}
+.initiative-highlight{border-color:var(--accent);border-width:2px}
+.initiative-title{font-size:18px;font-weight:700;color:var(--charcoal);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.initiative p{margin-bottom:8px}
+.initiative-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.initiative-link{font-size:12px;font-weight:500;color:var(--accent);background:#fde8e8;padding:4px 12px;border-radius:16px;transition:background .2s}
+.initiative-link:hover{background:#f8c4c4}
+.press-list{margin:24px 0}
+.press-item{padding:16px 0;border-bottom:1px solid var(--border);display:flex;gap:16px;align-items:flex-start}
+.press-item:last-child{border:none}
+.press-badge{font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+.press-item-title{font-size:14px;font-weight:600;color:var(--charcoal)}
+.press-item a{color:var(--accent)}
+@media(max-width:768px){.metric-row{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html#ondc" class="nav-back">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+      Back to Portfolio
+    </a>
+    <div class="nav-title">{{ ondcPage.navTitle }}</div>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-label">{{ ondcPage.heroLabel }}</div>
+    <h1>{{ ondcPage.heroTitle }}</h1>
+    <p>{{ ondcPage.heroDesc }}</p>
+  </div>
+</header>
+
+<div class="content">
+
+  <h2>Role Evolution</h2>
+  <p>{{ ondcPage.roleEvolution.para1 | safe }}</p>
+  <p>{{ ondcPage.roleEvolution.para2 | safe }}</p>
+
+  <h2>Phase 1: Digital Infrastructure</h2>
+
+  {%- for init in ondcPage.phase1Initiatives %}
+  <div class="initiative">
+    <div class="initiative-title">{{ init.icon }} {{ init.title }}</div>
+    <p>{{ init.description | safe }}</p>
+    {% if init.metrics.length %}
+    <div class="metric-row">
+      {%- for m in init.metrics %}
+      <div class="metric-card"><div class="metric-card-num">{{ m.value }}</div><div class="metric-card-label">{{ m.label }}</div></div>
+      {%- endfor %}
+    </div>
+    {% endif %}
+    {% if init.links.length %}
+    <div class="initiative-links">
+      {%- for link in init.links %}
+      <a href="{{ link.url }}" target="_blank" class="initiative-link">{{ link.text }}</a>
+      {%- endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {%- endfor %}
+
+  <h2>Phase 2: Social Impact & Government Partnerships</h2>
+
+  {%- for init in ondcPage.phase2Initiatives %}
+  <div class="initiative{% if init.highlighted %} initiative-highlight{% endif %}">
+    <div class="initiative-title">{{ init.icon }} {{ init.title }}</div>
+    <p>{{ init.description | safe }}</p>
+    {% if init.description2 %}<p>{{ init.description2 | safe }}</p>{% endif %}
+    {% if init.metrics.length %}
+    <div class="metric-row">
+      {%- for m in init.metrics %}
+      <div class="metric-card"><div class="metric-card-num">{{ m.value }}</div><div class="metric-card-label">{{ m.label }}</div></div>
+      {%- endfor %}
+    </div>
+    {% endif %}
+    {% if init.links.length %}
+    <div class="initiative-links">
+      {%- for link in init.links %}
+      <a href="{{ link.url }}" target="_blank" class="initiative-link">{{ link.text }}</a>
+      {%- endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {%- endfor %}
+
+  <h2>Communications & Network Expansion</h2>
+  <p>{{ ondcPage.comms.para1 | safe }}</p>
+  <p>{{ ondcPage.comms.para2 | safe }}</p>
+  {% if ondcPage.comms.links.length %}
+  <div class="initiative-links" style="margin-top:16px">
+    {%- for link in ondcPage.comms.links %}
+    <a href="{{ link.url }}" target="_blank" class="initiative-link">{{ link.text }}</a>
+    {%- endfor %}
+  </div>
+  {% endif %}
+
+  <h2>Published Case Studies</h2>
+  <div class="press-list">
+    {%- for cs in ondcPage.caseStudies %}
+    <div class="press-item">
+      <div class="press-badge">{{ cs.badge }}</div>
+      <div><div class="press-item-title">{{ cs.title }}</div><a href="{{ cs.url }}" target="_blank">{{ cs.linkText }}</a></div>
+    </div>
+    {%- endfor %}
+  </div>
+
+  <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+    <a href="index.html#ondc" style="font-size:14px;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:6px">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:16px;height:16px"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+      Back to Portfolio
+    </a>
+    <a href="lit-tech.html" style="font-size:14px;font-weight:600;color:var(--accent);display:flex;align-items:center;gap:6px">
+      Next: Lit Technologies Case Study
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:16px;height:16px"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+    </a>
+  </div>
+</div>
+</body>
+</html>

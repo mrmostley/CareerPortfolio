@@ -3,16 +3,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/admin");
 
-  // These static HTML pages should be copied as-is, not processed as templates
-  // Using rename to keep flat URLs (dashboard.html not dashboard/index.html)
+  // Dashboard stays as static passthrough (too complex for CMS)
   eleventyConfig.addPassthroughCopy({ "src/dashboard.html": "dashboard.html" });
-  eleventyConfig.addPassthroughCopy({ "src/ondc.html": "ondc.html" });
-  eleventyConfig.addPassthroughCopy({ "src/lit-tech.html": "lit-tech.html" });
-
-  // Ignore these files so 11ty doesn't also try to process them as templates
   eleventyConfig.ignores.add("src/dashboard.html");
-  eleventyConfig.ignores.add("src/ondc.html");
-  eleventyConfig.ignores.add("src/lit-tech.html");
 
   return {
     dir: {
