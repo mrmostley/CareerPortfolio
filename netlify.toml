@@ -11,3 +11,4 @@
   for = "/dashboard.html"
   [headers.values]
     X-Frame-Options = "SAMEORIGIN"
+/* Deploy trigger */
