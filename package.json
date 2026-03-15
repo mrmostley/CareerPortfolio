@@ -1,0 +1,18 @@
+{
+  "name": "careerportfolio",
+  "version": "1.0.0",
+  "description": "Rahul Antony — Portfolio Website",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrmostley/CareerPortfolio.git"
+  },
+  "author": "Rahul Antony",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

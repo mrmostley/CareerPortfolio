@@ -1,0 +1,73 @@
+{
+  "sectionLabel": "Product Portfolio: Lit Technologies (2018–2021)",
+  "sectionTitle": "Building B2B Commerce from Scratch",
+  "sectionDesc": "Led design, category strategy, and operations for a B2B kirana marketplace — from first wireframe to ₹55Cr+ GMV and acquisition by Udaan. Every screen below was designed and shipped by me.",
+  "caseStudyLink": "lit-tech.html",
+  "metrics": [
+    { "value": "₹55Cr+", "label": "Total GMV", "sub": "Mar 2018 – Oct 2020 (incl. Udaan)" },
+    { "value": "3,258", "label": "Kirana Stores", "sub": "Active buyers · 28% loyal (50+ orders)" },
+    { "value": "1,700", "label": "Product SKUs", "sub": "20 categories · national & regional brands" },
+    { "value": "100%", "label": "Retention on Migration", "sub": "Lit Tech → Udaan platform" }
+  ],
+  "consumerApp": {
+    "title": "B2B Ordering App",
+    "description": "Kirana store ordering app — vernacular-first, 70%+ local language users. Click any screen to enlarge.",
+    "screenshots": [
+      { "src": "/assets/images/littech/app-home.png", "alt": "LitApp Home", "label": "Home" },
+      { "src": "/assets/images/littech/app-categories.png", "alt": "Categories", "label": "Categories" },
+      { "src": "/assets/images/littech/app-category-listing.png", "alt": "Category Listing", "label": "Category View" },
+      { "src": "/assets/images/littech/app-product-listing.png", "alt": "Product Listing", "label": "Products" },
+      { "src": "/assets/images/littech/app-product-detail.png", "alt": "Product Detail", "label": "Product Detail" },
+      { "src": "/assets/images/littech/app-cart.png", "alt": "Cart", "label": "Cart" },
+      { "src": "/assets/images/littech/app-offers.png", "alt": "Offers", "label": "Offers" },
+      { "src": "/assets/images/littech/app-orders.png", "alt": "Orders", "label": "Orders" },
+      { "src": "/assets/images/littech/app-order-detail.png", "alt": "Order Detail", "label": "Order Detail" }
+    ]
+  },
+  "deliveryApp": {
+    "title": "Delivery & Routing Management",
+    "description": "Internal delivery app tracking 12M+ kg of goods. Route optimization, cash reconciliation, return management.",
+    "screenshots": [
+      { "src": "/assets/images/delivery/delivery-routes.png", "alt": "Routes", "label": "Routes" },
+      { "src": "/assets/images/delivery/delivery-store-list.png", "alt": "Store List", "label": "Store List" },
+      { "src": "/assets/images/delivery/delivery-route-map.png", "alt": "Route Map", "label": "Route Map" },
+      { "src": "/assets/images/delivery/delivery-store-task.png", "alt": "Store Task", "label": "Store Tasks" },
+      { "src": "/assets/images/delivery/delivery-task-detail.png", "alt": "Task Detail", "label": "Task Detail" },
+      { "src": "/assets/images/delivery/delivery-status.png", "alt": "Delivery Status", "label": "Status Mgmt" }
+    ]
+  },
+  "video": {
+    "title": "Platform in Action",
+    "description": "A day in our operations — from warehouse stacking and route planning to last-mile delivery across kirana stores in Trivandrum.",
+    "youtubeId": "9obz1Z3U-dE",
+    "caption": ""
+  },
+  "dashboard": {
+    "title": "Sales Analytics Dashboard",
+    "description": "Built from real operational data (Mar 2018 – May 2020). Interactive analytics covering revenue, categories, returns, margins, and customer segmentation.",
+    "note": "Note: The cumulative sales figure of ₹55Cr+ reflects the period through Oct 2020, including the post-acquisition Udaan phase. This dashboard covers the Lit Technologies operational period only.",
+    "embedSrc": "dashboard.html"
+  },
+  "thirdPartyProjects": [
+    {
+      "image": "/assets/images/thirdparty/jeevani-b2c.png",
+      "imageBg": "#f0fdf4",
+      "tag": "Kerala Govt × Suntec Group",
+      "title": "Jeevani Sanjeevani",
+      "description": "Farm-to-consumer platform digitising Horticorp stalls. Designed B2C ordering app, rider/delivery partner app, and design guidelines for rural store operators.",
+      "meta": ["B2C + Rider App", "Agriculture Dept."],
+      "link": "https://www.figma.com/proto/5b9ZIsEitZXKbXiWa3V5oh/Kerala-Food-Platform---Jeevani-Sanjeevani---Rider---Delivery-App",
+      "linkText": "View Figma Prototype →"
+    },
+    {
+      "image": "/assets/images/thirdparty/hhys-crm.png",
+      "imageBg": "#fef3c7",
+      "tag": "HHYS Inframart · Kerala",
+      "title": "B2C Ecommerce + Sales CRM",
+      "description": "Designed a B2C ecommerce app for 4,000+ SKUs (hardware, sanitary, electricals) and an internal CRM app for sales pipeline management and employee task tracking.",
+      "meta": ["4,000+ SKUs", "CRM + Ecommerce"],
+      "link": "",
+      "linkText": ""
+    }
+  ]
+}

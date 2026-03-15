@@ -1,0 +1,278 @@
+backend:
+  name: github
+  repo: mrmostley/CareerPortfolio
+  branch: feature/cms-setup
+
+media_folder: "src/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  # ═══════════ SITE SETTINGS ═══════════
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "site"
+        label: "General Settings"
+        file: "src/_data/site.json"
+        fields:
+          - { name: "title", label: "Page Title (browser tab)", widget: "string" }
+          - { name: "description", label: "SEO Description", widget: "text" }
+          - { name: "footerText", label: "Footer Text", widget: "string" }
+          - { name: "navBrand", label: "Nav Brand Name", widget: "string" }
+          - name: "navLinks"
+            label: "Navigation Links"
+            widget: "list"
+            fields:
+              - { name: "label", label: "Link Text", widget: "string" }
+              - { name: "href", label: "Link Target (e.g. #journey)", widget: "string" }
+
+  # ═══════════ HERO SECTION ═══════════
+  - name: "hero"
+    label: "Hero Section"
+    files:
+      - name: "hero"
+        label: "Hero Content"
+        file: "src/_data/hero.json"
+        fields:
+          - { name: "label", label: "Top Label (e.g. Ecosystem Builder)", widget: "string" }
+          - { name: "headline", label: "Headline Line 1", widget: "string" }
+          - { name: "headlineItalic", label: "Headline Line 2 (italic)", widget: "string" }
+          - { name: "description", label: "Bio Text", widget: "text" }
+          - { name: "cvFile", label: "CV File Path", widget: "string", hint: "e.g. /assets/docs/Rahul_Antony_CV.pdf" }
+          - { name: "linkedinUrl", label: "LinkedIn URL", widget: "string" }
+          - name: "metrics"
+            label: "Hero Metrics (the 4 boxes)"
+            widget: "list"
+            max: 6
+            fields:
+              - { name: "value", label: "Value (e.g. 17+)", widget: "string" }
+              - { name: "label", label: "Label (e.g. Years of Experience)", widget: "string" }
+
+  # ═══════════ CAREER TIMELINE ═══════════
+  - name: "timeline"
+    label: "Career Timeline"
+    files:
+      - name: "timeline"
+        label: "Timeline"
+        file: "src/_data/timeline.json"
+        fields:
+          - { name: "sectionLabel", label: "Section Label", widget: "string" }
+          - { name: "sectionTitle", label: "Section Title", widget: "string" }
+          - { name: "sectionDesc", label: "Section Description", widget: "text" }
+          - name: "eras"
+            label: "Career Eras"
+            widget: "list"
+            fields:
+              - { name: "dates", label: "Date Range", widget: "string" }
+              - { name: "company", label: "Era Name (e.g. The Builder)", widget: "string" }
+              - { name: "role", label: "Role / Companies", widget: "string" }
+              - { name: "highlights", label: "Description", widget: "text" }
+
+  # ═══════════ ONDC SECTION ═══════════
+  - name: "ondc"
+    label: "ONDC Section"
+    files:
+      - name: "ondc"
+        label: "ONDC Content"
+        file: "src/_data/ondc.json"
+        fields:
+          - { name: "sectionLabel", label: "Section Label", widget: "string" }
+          - { name: "sectionTitle", label: "Section Title", widget: "string" }
+          - { name: "sectionDesc", label: "Section Description", widget: "text" }
+          - { name: "caseStudyLink", label: "Case Study Page Link", widget: "string" }
+          - name: "metrics"
+            label: "Key Metrics (top row)"
+            widget: "list"
+            fields:
+              - { name: "value", label: "Value", widget: "string" }
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "sub", label: "Sub-text", widget: "string" }
+          - name: "initiatives"
+            label: "Initiative Cards"
+            widget: "list"
+            fields:
+              - { name: "icon", label: "Icon (emoji)", widget: "string" }
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - { name: "stat", label: "Stat Line", widget: "string" }
+          - name: "socialImpact"
+            label: "Social Impact Box"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+
+  # ═══════════ LIT TECH SECTION ═══════════
+  - name: "littech"
+    label: "Lit Tech Section"
+    files:
+      - name: "littech"
+        label: "Lit Tech Content"
+        file: "src/_data/littech.json"
+        fields:
+          - { name: "sectionLabel", label: "Section Label", widget: "string" }
+          - { name: "sectionTitle", label: "Section Title", widget: "string" }
+          - { name: "sectionDesc", label: "Section Description", widget: "text" }
+          - { name: "caseStudyLink", label: "Case Study Page Link", widget: "string" }
+          - name: "metrics"
+            label: "Key Metrics"
+            widget: "list"
+            fields:
+              - { name: "value", label: "Value", widget: "string" }
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "sub", label: "Sub-text", widget: "string" }
+          - name: "consumerApp"
+            label: "Consumer App Gallery"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Section Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - name: "screenshots"
+                label: "Screenshots"
+                widget: "list"
+                fields:
+                  - { name: "src", label: "Image Path", widget: "image" }
+                  - { name: "alt", label: "Alt Text", widget: "string" }
+                  - { name: "label", label: "Label Below Image", widget: "string" }
+          - name: "deliveryApp"
+            label: "Delivery App Gallery"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Section Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - name: "screenshots"
+                label: "Screenshots"
+                widget: "list"
+                fields:
+                  - { name: "src", label: "Image Path", widget: "image" }
+                  - { name: "alt", label: "Alt Text", widget: "string" }
+                  - { name: "label", label: "Label Below Image", widget: "string" }
+          - name: "video"
+            label: "YouTube Video"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Video Title", widget: "string" }
+              - { name: "description", label: "Video Description", widget: "text" }
+              - { name: "youtubeId", label: "YouTube Video ID (just the ID, not full URL)", widget: "string", hint: "e.g. 9obz1Z3U-dE from youtube.com/watch?v=9obz1Z3U-dE" }
+              - { name: "caption", label: "Caption (optional)", widget: "string", required: false }
+          - name: "dashboard"
+            label: "Dashboard Embed"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - { name: "note", label: "Disclaimer Note", widget: "text" }
+              - { name: "embedSrc", label: "Dashboard HTML File", widget: "string" }
+          - name: "thirdPartyProjects"
+            label: "Third Party Projects"
+            widget: "list"
+            fields:
+              - { name: "image", label: "Project Image", widget: "image" }
+              - { name: "imageBg", label: "Background Color (hex)", widget: "string" }
+              - { name: "tag", label: "Tag / Client", widget: "string" }
+              - { name: "title", label: "Project Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - { name: "meta", label: "Meta Tags", widget: "list", field: { name: "tag", label: "Tag", widget: "string" } }
+              - { name: "link", label: "External Link (optional)", widget: "string", required: false }
+              - { name: "linkText", label: "Link Text (optional)", widget: "string", required: false }
+
+  # ═══════════ IMPACT SECTION ═══════════
+  - name: "impact"
+    label: "Impact Metrics"
+    files:
+      - name: "impact"
+        label: "Impact Content"
+        file: "src/_data/impact.json"
+        fields:
+          - { name: "sectionLabel", label: "Section Label", widget: "string" }
+          - { name: "sectionTitle", label: "Section Title", widget: "string" }
+          - { name: "sectionDesc", label: "Section Description", widget: "text" }
+          - name: "metrics"
+            label: "Metric Cards"
+            widget: "list"
+            fields:
+              - { name: "value", label: "Value", widget: "string" }
+              - { name: "label", label: "Label", widget: "string" }
+              - { name: "sub", label: "Sub-text", widget: "string" }
+
+  # ═══════════ ADVERTISING SECTION ═══════════
+  - name: "advertising"
+    label: "Advertising Section"
+    files:
+      - name: "advertising"
+        label: "Advertising Content"
+        file: "src/_data/advertising.json"
+        fields:
+          - { name: "sectionLabel", label: "Section Label", widget: "string" }
+          - { name: "sectionTitle", label: "Section Title", widget: "string" }
+          - { name: "sectionDesc", label: "Section Description", widget: "text" }
+          - name: "roles"
+            label: "Roles"
+            widget: "list"
+            fields:
+              - { name: "tag", label: "Company & Dates", widget: "string" }
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "description", label: "Description", widget: "text" }
+              - { name: "meta", label: "Awards/Tags", widget: "list", field: { name: "tag", label: "Tag", widget: "string" } }
+          - { name: "brands", label: "Brand Tags", widget: "list", field: { name: "brand", label: "Brand Name", widget: "string" } }
+
+  # ═══════════ PRESS & RECOGNITION ═══════════
+  - name: "press"
+    label: "Press & Recognition"
+    files:
+      - name: "press"
+        label: "Press Content"
+        file: "src/_data/press.json"
+        fields:
+          - { name: "sectionLabel", label: "Section Label", widget: "string" }
+          - { name: "sectionTitle", label: "Section Title", widget: "string" }
+          - name: "items"
+            label: "Press Items"
+            widget: "list"
+            fields:
+              - { name: "publication", label: "Publication Name", widget: "string" }
+              - { name: "title", label: "Article Title", widget: "string" }
+              - { name: "url", label: "Article URL", widget: "string" }
+              - { name: "linkText", label: "Link Text (e.g. Read Article →)", widget: "string" }
+          - { name: "awards", label: "Awards", widget: "list", field: { name: "award", label: "Award", widget: "string" } }
+
+  # ═══════════ CONTACT SECTION ═══════════
+  - name: "contact"
+    label: "Contact Section"
+    files:
+      - name: "contact"
+        label: "Contact Info"
+        file: "src/_data/contact.json"
+        fields:
+          - { name: "sectionLabel", label: "Section Label", widget: "string" }
+          - { name: "sectionTitle", label: "Section Title", widget: "string" }
+          - { name: "sectionDesc", label: "Section Description", widget: "text" }
+          - { name: "email", label: "Email Address", widget: "string" }
+          - { name: "phone", label: "Phone (with country code)", widget: "string" }
+          - { name: "phoneDisplay", label: "Phone Display Format", widget: "string" }
+          - { name: "linkedin", label: "LinkedIn URL", widget: "string" }
+          - { name: "linkedinDisplay", label: "LinkedIn Display Text", widget: "string" }
+          - { name: "cvFile", label: "CV File Path", widget: "string" }
+          - name: "lookingFor"
+            label: "What I'm Looking For Box"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "paragraph1", label: "Paragraph 1", widget: "text" }
+              - { name: "paragraph2", label: "Paragraph 2", widget: "text" }
+
+  # ═══════════ EDUCATION & TOOLS ═══════════
+  - name: "education"
+    label: "Education & Tools"
+    files:
+      - name: "education"
+        label: "Education Content"
+        file: "src/_data/education.json"
+        fields:
+          - name: "degrees"
+            label: "Degrees"
+            widget: "list"
+            fields:
+              - { name: "title", label: "Degree Title", widget: "string" }
+              - { name: "institution", label: "Institution & Year", widget: "string" }
+          - { name: "tools", label: "Tools & Platforms", widget: "list", field: { name: "tool", label: "Tool Name", widget: "string" } }

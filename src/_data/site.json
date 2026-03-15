@@ -1,0 +1,14 @@
+{
+  "title": "Rahul Antony — Ecosystem Builder · DPI · B2B Platforms",
+  "description": "17+ years building digital public infrastructure, B2B platforms, and ecosystem growth. Among the first 20 at ONDC. Previously Udaan, Ogilvy, Bates/WPP.",
+  "footerText": "© 2026 Rahul Antony. Built with purpose.",
+  "navBrand": "Rahul",
+  "navLinks": [
+    { "label": "Journey", "href": "#journey" },
+    { "label": "ONDC", "href": "#ondc" },
+    { "label": "Lit Tech", "href": "#littech" },
+    { "label": "Impact", "href": "#impact" },
+    { "label": "Press", "href": "#press" },
+    { "label": "Contact", "href": "#contact" }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "sectionLabel": "Featured: ONDC (2022–2025)",
+  "sectionTitle": "Architecting India's Digital Commerce Infrastructure",
+  "sectionDesc": "As Lead — Social Sector Growth & Digital Programs, I built foundational tools, operationalised government partnerships, and drove measurable social impact on a national protocol.",
+  "caseStudyLink": "ondc.html",
+  "metrics": [
+    { "value": "2M+", "label": "Website Visitors", "sub": "ondc.org · 14 languages · 69% engagement" },
+    { "value": "3,000+", "label": "Academy Users", "sub": "NCVET accredited · certification mandatory" },
+    { "value": "120K+", "label": "MSMEs on QR Code", "sub": "Instant digital storefront discovery" },
+    { "value": "85%", "label": "Auto Query Resolution", "sub": "ONDC Sahayak chatbot · 17K+ users" }
+  ],
+  "initiatives": [
+    {
+      "icon": "🎓",
+      "title": "ONDC Academy",
+      "description": "Built from scratch — digital education platform for network participants. Secured NCVET Dual Awarding Body accreditation. Certification made mandatory for network participation.",
+      "stat": "550+ certified · 40+ hrs content"
+    },
+    {
+      "icon": "💬",
+      "title": "ONDC Sahayak",
+      "description": "WhatsApp chatbot providing scalable seller onboarding support. Autonomously resolved 85% of queries across a rapidly growing national user base.",
+      "stat": "17K+ unique users"
+    },
+    {
+      "icon": "📱",
+      "title": "Seller QR Code",
+      "description": "Interoperable QR code enabling instant digital storefront discovery and catalogue access for MSMEs across the ONDC network.",
+      "stat": "120K+ MSMEs enabled"
+    },
+    {
+      "icon": "🔧",
+      "title": "ONDC Saarthi",
+      "description": "v1.0 developer reference app (UI/UX design) that accelerated third-party integration and reduced network onboarding time for participants.",
+      "stat": "Foundation for ecosystem onboarding"
+    },
+    {
+      "icon": "🤝",
+      "title": "Government Partnerships",
+      "description": "Operationalised partnerships with Ministry of Rural Development and Ministry of Textiles. Enabled first-ever digital sales for artisans and SHGs across 15+ state and central emporiums.",
+      "stat": "MoRD · MoT · TRIFED · AP-MEPMA"
+    },
+    {
+      "icon": "🏆",
+      "title": "AP Women's Day Campaign",
+      "description": "Facilitated a campaign generating 3 lakh orders worth ₹5.13 crore in one week for women entrepreneurs in Andhra Pradesh.",
+      "stat": "Official Guinness World Record"
+    }
+  ],
+  "socialImpact": {
+    "title": "Social Impact & Seller Trust",
+    "description": "Supported a Bill & Melinda Gates Foundation-funded initiative to enhance seller trust and verification. Increased adoption of verifiable credentials (GI Tag, Women-Owned, Organic) by 40%. Authored a Supply Playbook that reversed sector de-growth by improving catalogue quality and fulfilment rates for rural and first-time digital sellers. Scaled credentialed sellers from 104 to 497 within the tracked cohort, and expanded network-wide credentials from 6K to 11K sellers."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "label": "Ecosystem Builder",
+  "headline": "From Pixels to People,",
+  "headlineItalic": "building systems that scale.",
+  "description": "17+ years spanning digital public infrastructure, B2B commerce platforms, and brand communication. Among the first 20 employees at ONDC — India's national commerce protocol — where I operationalised government partnerships and scaled digital adoption for MSMEs, artisans, and Self-Help Groups.",
+  "cvFile": "/assets/docs/Rahul_Antony_CV.pdf",
+  "linkedinUrl": "https://www.linkedin.com/in/antonyrahul",
+  "metrics": [
+    { "value": "17+", "label": "Years of Experience" },
+    { "value": "₹55Cr+", "label": "GMV Generated (B2B)" },
+    { "value": "120K+", "label": "MSMEs Enabled (ONDC)" },
+    { "value": "Guinness", "label": "World Record (AP, 2025)" }
+  ]
+}

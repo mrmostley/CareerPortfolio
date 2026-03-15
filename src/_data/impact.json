@@ -1,0 +1,15 @@
+{
+  "sectionLabel": "Career Impact",
+  "sectionTitle": "Numbers that matter",
+  "sectionDesc": "Quantified outcomes across three career eras — from global advertising campaigns to national digital infrastructure.",
+  "metrics": [
+    { "value": "₹55Cr+", "label": "B2B GMV Generated", "sub": "Lit Technologies + Udaan · 2018–2021" },
+    { "value": "₹5.13Cr", "label": "AP Campaign GMV", "sub": "3 lakh orders in 1 week · Guinness Record" },
+    { "value": "120K+", "label": "MSMEs Enabled", "sub": "ONDC Seller QR Code · digital storefronts" },
+    { "value": "14", "label": "Languages", "sub": "ondc.org national portal · 2M+ visitors" },
+    { "value": "40%", "label": "Credentials Adoption", "sub": "BMGF-funded · GI Tag, Women-Owned, Organic" },
+    { "value": "3,258", "label": "Kirana Stores Served", "sub": "Lit Technologies · 94.6% fulfilment rate" },
+    { "value": "12M+ kg", "label": "Goods Delivered", "sub": "Delivery app · 28 months" },
+    { "value": "15+", "label": "Govt. Emporiums", "sub": "Central Cottage, TRIFED, IndiaHandmade & more" }
+  ]
+}

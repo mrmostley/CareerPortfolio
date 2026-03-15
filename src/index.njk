@@ -1,0 +1,474 @@
+---
+permalink: /index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ site.title }}</title>
+<meta name="description" content="{{ site.description }}">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>R</text></svg>">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<!-- ═══════════ NAVIGATION ═══════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand">{{ site.navBrand }}<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      {%- for link in site.navLinks %}
+      <li><a href="{{ link.href }}">{{ link.label }}</a></li>
+      {%- endfor %}
+    </ul>
+    <button class="nav-menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-label">{{ hero.label }}</div>
+        <h1>{{ hero.headline }}<br><span class="italic">{{ hero.headlineItalic }}</span></h1>
+        <p class="hero-desc">{{ hero.description }}</p>
+        <div class="hero-ctas">
+          <a href="{{ hero.cvFile }}" class="btn btn-primary" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CV
+          </a>
+          <a href="{{ hero.linkedinUrl }}" class="btn btn-outline" target="_blank">LinkedIn</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-metrics">
+        {%- for m in hero.metrics %}
+        <div class="hero-metric">
+          <div class="hero-metric-value">{{ m.value }}</div>
+          <div class="hero-metric-label">{{ m.label }}</div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CAREER TIMELINE ═══════════ -->
+<section class="section section-alt" id="journey">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">{{ timeline.sectionLabel }}</div>
+      <h2 class="section-title">{{ timeline.sectionTitle }}</h2>
+      <p class="section-desc">{{ timeline.sectionDesc }}</p>
+    </div>
+    <div class="timeline-track reveal">
+      {%- for era in timeline.eras %}
+      <div class="timeline-era">
+        <div class="timeline-dates">{{ era.dates }}</div>
+        <div class="timeline-company">{{ era.company }}</div>
+        <div class="timeline-role">{{ era.role }}</div>
+        <div class="timeline-highlights">{{ era.highlights }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ONDC DEEP DIVE ═══════════ -->
+<section class="section" id="ondc">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">{{ ondc.sectionLabel }}</div>
+      <h2 class="section-title">{{ ondc.sectionTitle }}</h2>
+      <p class="section-desc">{{ ondc.sectionDesc }}</p>
+    </div>
+
+    <!-- ONDC Metrics -->
+    <div class="metrics-grid reveal" style="margin-bottom: 40px;">
+      {%- for m in ondc.metrics %}
+      <div class="metric-card">
+        <div class="metric-card-value">{{ m.value }}</div>
+        <div class="metric-card-label">{{ m.label }}</div>
+        <div class="metric-card-sub">{{ m.sub }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+
+    <!-- ONDC Initiatives -->
+    <div class="initiatives-grid reveal">
+      {%- for i in ondc.initiatives %}
+      <div class="initiative-card">
+        <div class="initiative-icon">{{ i.icon }}</div>
+        <div class="initiative-title">{{ i.title }}</div>
+        <div class="initiative-desc">{{ i.description }}</div>
+        <div class="initiative-stat">{{ i.stat }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+
+    <!-- ONDC Social Impact -->
+    <div class="reveal" style="margin-top: 48px; padding: 32px; background: var(--bg-subtle); border-radius: var(--radius); border: 1px solid var(--border);">
+      <h3 style="margin-bottom: 16px;">{{ ondc.socialImpact.title }}</h3>
+      <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 16px;">{{ ondc.socialImpact.description }}</p>
+      <div style="margin-top: 24px;">
+        <a href="{{ ondc.caseStudyLink }}" class="btn btn-primary">View Full ONDC Case Study →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ LIT TECH / PRODUCT PORTFOLIO ═══════════ -->
+<section class="section section-alt" id="littech">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">{{ littech.sectionLabel }}</div>
+      <h2 class="section-title">{{ littech.sectionTitle }}</h2>
+      <p class="section-desc">{{ littech.sectionDesc }}</p>
+    </div>
+
+    <!-- Key metrics -->
+    <div class="metrics-grid reveal" style="margin-bottom: 40px;">
+      {%- for m in littech.metrics %}
+      <div class="metric-card">
+        <div class="metric-card-value">{{ m.value }}</div>
+        <div class="metric-card-label">{{ m.label }}</div>
+        <div class="metric-card-sub">{{ m.sub }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+
+    <!-- Consumer App Gallery -->
+    <div class="reveal">
+      <h3 style="margin-bottom: 8px;">{{ littech.consumerApp.title }}</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">{{ littech.consumerApp.description }}</p>
+      <div class="gallery-scroll">
+        {%- for s in littech.consumerApp.screenshots %}
+        <div class="gallery-item" onclick="openLightbox('{{ s.src }}','{{ s.label }}')">
+          <img src="{{ s.src }}" alt="{{ s.alt }}" loading="lazy">
+          <div class="gallery-item-label">{{ s.label }}</div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+
+    <!-- Delivery App Gallery -->
+    <div class="reveal" style="margin-top: 40px;">
+      <h3 style="margin-bottom: 8px;">{{ littech.deliveryApp.title }}</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">{{ littech.deliveryApp.description }}</p>
+      <div class="gallery-scroll">
+        {%- for s in littech.deliveryApp.screenshots %}
+        <div class="gallery-item" onclick="openLightbox('{{ s.src }}','{{ s.label }}')">
+          <img src="{{ s.src }}" alt="{{ s.alt }}" loading="lazy">
+          <div class="gallery-item-label">{{ s.label }}</div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="reveal" style="margin-top: 40px;">
+      <h3 style="margin-bottom: 8px;">{{ littech.video.title }}</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">{{ littech.video.description }}</p>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/{{ littech.video.youtubeId }}" title="{{ littech.video.title }}" allowfullscreen loading="lazy"></iframe>
+      </div>
+      {% if littech.video.caption %}
+      <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px; font-style: italic;">{{ littech.video.caption }}</p>
+      {% endif %}
+    </div>
+
+    <!-- Dashboard -->
+    <div class="reveal" style="margin-top: 48px;">
+      <h3 style="margin-bottom: 8px;">{{ littech.dashboard.title }}</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">
+        {{ littech.dashboard.description }}
+        <span style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">{{ littech.dashboard.note }}</span>
+      </p>
+      <div class="dashboard-embed">
+        <iframe src="{{ littech.dashboard.embedSrc }}" title="Kirana B2B Sales Dashboard" loading="lazy"></iframe>
+        <div class="dashboard-embed-note">
+          Interactive dashboard — scroll and switch tabs to explore.
+          <a href="{{ littech.dashboard.embedSrc }}" target="_blank" style="margin-left: 8px; font-weight: 700; color: var(--accent);">Open Full Dashboard →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Party Projects -->
+    <div class="reveal" style="margin-top: 48px;">
+      <h3 style="margin-bottom: 8px;">Additional Design Projects</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Third-party projects undertaken during the Lit Technologies period, demonstrating design versatility beyond B2B grocery.</p>
+      <div class="projects-grid">
+        {%- for p in littech.thirdPartyProjects %}
+        <div class="project-card">
+          <div class="project-card-img" style="background: {{ p.imageBg }};">
+            <img src="{{ p.image }}" alt="{{ p.title }}">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-tag">{{ p.tag }}</div>
+            <div class="project-card-title">{{ p.title }}</div>
+            <div class="project-card-desc">{{ p.description }}</div>
+            <div class="project-card-meta">
+              {%- for meta in p.meta %}
+              <span>{{ meta }}</span>
+              {%- endfor %}
+              {% if p.link %}
+              <span><a href="{{ p.link }}" target="_blank" style="color: var(--accent);">{{ p.linkText }}</a></span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {%- endfor %}
+      </div>
+    </div>
+
+    <div style="margin-top: 36px; text-align: center;">
+      <a href="{{ littech.caseStudyLink }}" class="btn btn-primary">View Full Lit Tech Case Study →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ IMPACT DASHBOARD ═══════════ -->
+<section class="section" id="impact">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">{{ impact.sectionLabel }}</div>
+      <h2 class="section-title">{{ impact.sectionTitle }}</h2>
+      <p class="section-desc">{{ impact.sectionDesc }}</p>
+    </div>
+    <div class="metrics-grid reveal">
+      {%- for m in impact.metrics %}
+      <div class="metric-card">
+        <div class="metric-card-value">{{ m.value | safe }}</div>
+        <div class="metric-card-label">{{ m.label }}</div>
+        <div class="metric-card-sub">{{ m.sub }}</div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ADVERTISING ═══════════ -->
+<section class="section section-subtle" id="advertising">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">{{ advertising.sectionLabel }}</div>
+      <h2 class="section-title">{{ advertising.sectionTitle }}</h2>
+      <p class="section-desc">{{ advertising.sectionDesc }}</p>
+    </div>
+    <div class="projects-grid reveal">
+      {%- for role in advertising.roles %}
+      <div class="project-card" style="border-left: 3px solid var(--accent);">
+        <div class="project-card-body">
+          <div class="project-card-tag">{{ role.tag }}</div>
+          <div class="project-card-title">{{ role.title }}</div>
+          <div class="project-card-desc">{{ role.description }}</div>
+          <div class="project-card-meta">
+            {%- for meta in role.meta %}
+            <span>{{ meta }}</span>
+            {%- endfor %}
+          </div>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+    <div class="reveal" style="margin-top: 24px;">
+      <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600; margin-bottom: 12px;">Brands Managed</p>
+      <div class="brands-row">
+        {%- for brand in advertising.brands %}
+        <span class="brand-tag">{{ brand }}</span>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRESS & RECOGNITION ═══════════ -->
+<section class="section section-alt" id="press">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">{{ press.sectionLabel }}</div>
+      <h2 class="section-title">{{ press.sectionTitle }}</h2>
+    </div>
+    <div class="press-grid reveal">
+      {%- for item in press.items %}
+      <a class="press-card" href="{{ item.url }}" target="_blank">
+        <div class="press-pub">{{ item.publication }}</div>
+        <div class="press-title">{{ item.title }}</div>
+        <div class="press-link">{{ item.linkText }}</div>
+      </a>
+      {%- endfor %}
+      <div class="press-card" style="display:flex; flex-direction:column; justify-content:center; align-items:center; background: var(--bg-subtle); border-style: dashed;">
+        <div style="font-size: 0.85rem; color: var(--text-muted); text-align: center;">
+          <strong style="display:block; margin-bottom:4px;">Awards</strong>
+          {%- for award in press.awards %}
+          {{ award }}{% if not loop.last %}<br>{% endif %}
+          {%- endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ EDUCATION ═══════════ -->
+<section class="section" style="padding: 48px 0;">
+  <div class="container">
+    <div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+      <div>
+        <div class="section-label">Education</div>
+        <h3 style="margin-bottom: 16px;">Academic Background</h3>
+        {%- for d in education.degrees %}
+        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;{% if not loop.first %} margin-top: 12px;{% endif %}">
+          <strong>{{ d.title }}</strong><br>
+          {{ d.institution }}
+        </p>
+        {%- endfor %}
+      </div>
+      <div>
+        <div class="section-label">Tools & Platforms</div>
+        <h3 style="margin-bottom: 16px;">Technical Toolkit</h3>
+        <div class="brands-row">
+          {%- for tool in education.tools %}
+          <span class="brand-tag">{{ tool }}</span>
+          {%- endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">{{ contact.sectionLabel }}</div>
+      <h2 class="section-title">{{ contact.sectionTitle }}</h2>
+      <p class="section-desc">{{ contact.sectionDesc }}</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value"><a href="tel:{{ contact.phone }}">{{ contact.phoneDisplay }}</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🔗</div>
+          <div>
+            <div class="contact-label">LinkedIn</div>
+            <div class="contact-value"><a href="{{ contact.linkedin }}" target="_blank">{{ contact.linkedinDisplay }}</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📄</div>
+          <div>
+            <div class="contact-label">Resume</div>
+            <div class="contact-value"><a href="{{ contact.cvFile }}" target="_blank">Download CV (PDF)</a></div>
+          </div>
+        </div>
+      </div>
+      <div style="background: var(--bg-subtle); border-radius: var(--radius); padding: 32px; border: 1px solid var(--border);">
+        <h3 style="margin-bottom: 8px; font-size: 1.1rem;">{{ contact.lookingFor.title }}</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 16px;">{{ contact.lookingFor.paragraph1 }}</p>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7;">{{ contact.lookingFor.paragraph2 }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="container">
+    {{ site.footerText }}
+  </div>
+</footer>
+
+<!-- ═══════════ LIGHTBOX ═══════════ -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+
+<!-- ═══════════ SCRIPTS ═══════════ -->
+<script>
+// Nav scroll effect
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// Close mobile menu on link click
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  });
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => revealObserver.observe(el));
+
+// Lightbox
+function openLightbox(src, caption) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightboxCaption').textContent = caption || '';
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const top = section.offsetTop - 100;
+    if (window.scrollY >= top) current = section.getAttribute('id');
+  });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+  });
+});
+</script>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>
