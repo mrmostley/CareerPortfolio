@@ -6,9 +6,21 @@
   "cvFile": "/assets/docs/Rahul_Antony_CV.pdf",
   "linkedinUrl": "https://www.linkedin.com/in/antonyrahul",
   "metrics": [
-    { "value": "17+", "label": "Years of Experience" },
-    { "value": "₹55Cr+", "label": "GMV Generated (B2B)" },
-    { "value": "120K+", "label": "MSMEs Enabled (ONDC)" },
-    { "value": "Guinness", "label": "World Record (AP, 2025)" }
+    {
+      "value": "17+",
+      "label": "Years of Experience"
+    },
+    {
+      "value": "₹55Cr+",
+      "label": "GMV Generated (B2B) ('18-'20)"
+    },
+    {
+      "value": "120K+",
+      "label": "MSMEs Enabled (ONDC)"
+    },
+    {
+      "value": "Guinness",
+      "label": "World Record (AP, 2025)"
+    }
   ]
 }
