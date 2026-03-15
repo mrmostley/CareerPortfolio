@@ -3,629 +3,701 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rahul Antony — Ecosystem Builder | DPI · B2B Commerce · Social Impact</title>
-<meta name="description" content="17+ years building digital public infrastructure, B2B platforms, and ecosystem-scale impact. Among the first 20 at ONDC. Previously Udaan, Ogilvy, Bates/WPP.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<style>
-/* ── RESET & BASE ──────────────────────────────────────────── */
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'Libre Franklin',sans-serif;color:#1a1a2e;background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-
-/* ── VARIABLES ─────────────────────────────────────────────── */
-:root{
-  --accent:#c0392b;
-  --accent-light:#e74c3c;
-  --charcoal:#1a1a2e;
-  --text:#2c3e50;
-  --muted:#7f8c8d;
-  --light-bg:#f8f9fa;
-  --border:#e8ecef;
-  --serif:'Source Serif 4',Georgia,serif;
-  --sans:'Libre Franklin',system-ui,sans-serif;
-  --max-w:1140px;
-  --section-pad:100px 0;
-}
-
-/* ── NAV ───────────────────────────────────────────────────── */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
-.nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
-.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px}
-.nav-name{font-weight:700;font-size:15px;letter-spacing:-.02em;color:var(--charcoal)}
-.nav-name span{color:var(--accent);font-weight:400}
-.nav-links{display:flex;gap:28px;align-items:center}
-.nav-links a{font-size:13px;font-weight:500;color:var(--muted);transition:color .2s;letter-spacing:.02em}
-.nav-links a:hover{color:var(--charcoal)}
-.nav-cta{background:var(--charcoal);color:#fff!important;padding:8px 18px;border-radius:6px;font-size:12px;font-weight:600;letter-spacing:.03em;transition:background .2s}
-.nav-cta:hover{background:var(--accent)}
-.nav-menu-btn{display:none;background:none;border:none;cursor:pointer;padding:8px}
-.nav-menu-btn span{display:block;width:20px;height:2px;background:var(--charcoal);margin:4px 0;transition:.3s}
-
-/* ── HERO ──────────────────────────────────────────────────── */
-.hero{padding:160px 24px 100px;max-width:var(--max-w);margin:0 auto}
-.hero-label{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
-.hero h1{font-family:var(--serif);font-size:clamp(36px,5vw,56px);font-weight:700;line-height:1.12;color:var(--charcoal);margin-bottom:20px;letter-spacing:-.03em}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero-sub{font-size:18px;color:var(--text);max-width:640px;line-height:1.7;margin-bottom:36px}
-.hero-badges{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
-.badge{display:flex;align-items:center;gap:8px;background:var(--light-bg);border:1px solid var(--border);border-radius:8px;padding:10px 16px}
-.badge-num{font-size:20px;font-weight:700;color:var(--charcoal);font-variant-numeric:tabular-nums}
-.badge-label{font-size:11px;color:var(--muted);font-weight:500;line-height:1.3}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:600;transition:all .2s;cursor:pointer;border:none}
-.btn-primary{background:var(--charcoal);color:#fff}
-.btn-primary:hover{background:var(--accent)}
-.btn-outline{background:transparent;color:var(--charcoal);border:1.5px solid var(--border)}
-.btn-outline:hover{border-color:var(--charcoal)}
-.btn svg{width:16px;height:16px}
-
-/* ── SECTION SHARED ────────────────────────────────────────── */
-.section{padding:var(--section-pad)}
-.section-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px}
-.section-alt{background:var(--light-bg)}
-.section-label{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
-.section-title{font-family:var(--serif);font-size:clamp(28px,3.5vw,40px);font-weight:700;color:var(--charcoal);margin-bottom:16px;letter-spacing:-.02em}
-.section-desc{font-size:16px;color:var(--muted);max-width:600px;line-height:1.7;margin-bottom:48px}
-
-/* ── TIMELINE ──────────────────────────────────────────────── */
-.timeline{position:relative;padding:40px 0}
-.timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--border);transform:translateX(-50%)}
-.tl-item{position:relative;width:50%;padding:0 48px 60px}
-.tl-item:nth-child(odd){margin-left:0;text-align:right}
-.tl-item:nth-child(even){margin-left:50%;text-align:left}
-.tl-dot{position:absolute;top:4px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid var(--accent);z-index:2}
-.tl-item:nth-child(odd) .tl-dot{right:-7px}
-.tl-item:nth-child(even) .tl-dot{left:-7px}
-.tl-date{font-size:12px;font-weight:600;color:var(--accent);letter-spacing:.06em;margin-bottom:6px}
-.tl-role{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--charcoal);margin-bottom:4px}
-.tl-org{font-size:14px;font-weight:500;color:var(--text);margin-bottom:8px}
-.tl-desc{font-size:13px;color:var(--muted);line-height:1.6}
-.tl-tag{display:inline-block;font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-top:8px}
-.tl-tag-dpi{background:#fde8e8;color:var(--accent)}
-.tl-tag-builder{background:#e8f5e9;color:#2e7d32}
-.tl-tag-comms{background:#e3f2fd;color:#1565c0}
-
-/* ── ONDC SECTION ──────────────────────────────────────────── */
-.ondc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-bottom:48px}
-.initiative-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px;transition:box-shadow .2s,transform .2s}
-.initiative-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.06);transform:translateY(-2px)}
-.ic-icon{font-size:28px;margin-bottom:12px}
-.ic-title{font-family:var(--serif);font-size:18px;font-weight:700;color:var(--charcoal);margin-bottom:8px}
-.ic-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px}
-.ic-metric{display:flex;align-items:baseline;gap:6px}
-.ic-metric-num{font-size:22px;font-weight:700;color:var(--accent)}
-.ic-metric-label{font-size:12px;color:var(--muted)}
-.ondc-press{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.press-chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;color:var(--text);background:#fff;border:1px solid var(--border);border-radius:20px;padding:6px 14px;transition:border-color .2s}
-.press-chip:hover{border-color:var(--accent)}
-.press-chip svg{width:12px;height:12px;color:var(--muted)}
-.ondc-cta{margin-top:36px}
-
-/* ── LIT TECH SECTION ──────────────────────────────────────── */
-.littech-hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:48px}
-.littech-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:28px 0}
-.lt-stat{background:var(--light-bg);border-radius:8px;padding:16px}
-.lt-stat-num{font-size:24px;font-weight:700;color:var(--charcoal)}
-.lt-stat-label{font-size:12px;color:var(--muted);margin-top:2px}
-.app-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.app-preview img{border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.08);transition:transform .3s}
-.app-preview img:hover{transform:scale(1.03)}
-
-/* ── IMPACT DASHBOARD ──────────────────────────────────────── */
-.impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-bottom:48px}
-.impact-card{text-align:center;padding:32px 20px;background:#fff;border:1px solid var(--border);border-radius:12px}
-.impact-num{font-size:36px;font-weight:700;color:var(--charcoal);font-variant-numeric:tabular-nums;line-height:1}
-.impact-unit{font-size:14px;font-weight:600;color:var(--accent)}
-.impact-label{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.4}
-
-/* ── PRESS ─────────────────────────────────────────────────── */
-.press-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
-.press-card{display:flex;align-items:flex-start;gap:16px;padding:20px;background:#fff;border:1px solid var(--border);border-radius:10px;transition:box-shadow .2s}
-.press-card:hover{box-shadow:0 4px 16px rgba(0,0,0,0.06)}
-.press-icon{width:40px;height:40px;min-width:40px;background:var(--light-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
-.press-pub{font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.04em;text-transform:uppercase}
-.press-title{font-size:14px;font-weight:600;color:var(--charcoal);margin-top:4px;line-height:1.4}
-.press-date{font-size:11px;color:var(--muted);margin-top:4px}
-
-/* ── CONTACT ───────────────────────────────────────────────── */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.contact-info{display:flex;flex-direction:column;gap:20px}
-.contact-item{display:flex;align-items:center;gap:12px}
-.contact-icon{width:40px;height:40px;background:var(--light-bg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px}
-.contact-label{font-size:12px;color:var(--muted)}
-.contact-val{font-size:15px;font-weight:600;color:var(--charcoal)}
-.contact-form{display:flex;flex-direction:column;gap:14px}
-.contact-form input,.contact-form textarea{font-family:var(--sans);font-size:14px;padding:12px 16px;border:1.5px solid var(--border);border-radius:8px;background:#fff;color:var(--charcoal);transition:border-color .2s;outline:none}
-.contact-form input:focus,.contact-form textarea:focus{border-color:var(--accent)}
-.contact-form textarea{min-height:120px;resize:vertical}
-
-/* ── FOOTER ────────────────────────────────────────────────── */
-.footer{padding:40px 24px;text-align:center;border-top:1px solid var(--border)}
-.footer p{font-size:12px;color:var(--muted)}
-
-/* ── LIGHTBOX ──────────────────────────────────────────────── */
-.lightbox{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.9);align-items:center;justify-content:center;cursor:zoom-out}
-.lightbox.active{display:flex}
-.lightbox img{max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 0 60px rgba(0,0,0,0.4)}
-.lightbox-close{position:absolute;top:20px;right:24px;color:#fff;font-size:28px;cursor:pointer;opacity:.7;transition:opacity .2s}
-.lightbox-close:hover{opacity:1}
-
-/* ── ANIMATIONS ────────────────────────────────────────────── */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:none}
-
-/* ── RESPONSIVE ────────────────────────────────────────────── */
-@media(max-width:768px){
-  :root{--section-pad:60px 0}
-  .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:#fff;flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--border);box-shadow:0 8px 20px rgba(0,0,0,0.06)}
-  .nav-links.open{display:flex}
-  .nav-menu-btn{display:block}
-  .hero{padding:120px 24px 60px}
-  .hero h1{font-size:32px}
-  .timeline::before{left:20px}
-  .tl-item,.tl-item:nth-child(even){width:100%;margin-left:0;padding:0 0 40px 48px;text-align:left}
-  .tl-item .tl-dot,.tl-item:nth-child(odd) .tl-dot,.tl-item:nth-child(even) .tl-dot{left:13px;right:auto}
-  .littech-hero{grid-template-columns:1fr}
-  .app-preview{grid-template-columns:repeat(3,1fr)}
-  .contact-grid{grid-template-columns:1fr}
-  .impact-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:480px){
-  .hero-badges{flex-direction:column}
-  .app-preview{grid-template-columns:repeat(2,1fr)}
-  .impact-grid{grid-template-columns:1fr 1fr}
-}
-</style>
+<title>Rahul Antony — Ecosystem Builder · DPI · B2B Platforms</title>
+<meta name="description" content="17+ years building digital public infrastructure, B2B platforms, and ecosystem growth. Among the first 20 at ONDC. Previously Udaan, Ogilvy, Bates/WPP.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24'>R</text></svg>">
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════════════════════════════ NAV -->
+<!-- ═══════════ NAVIGATION ═══════════ -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
-    <div class="nav-name">Rahul Antony <span>·</span> Ecosystem Builder</div>
-    <button class="nav-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-      <span></span><span></span><span></span>
+    <a href="#" class="nav-brand">Rahul<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#ondc">ONDC</a></li>
+      <li><a href="#littech">Lit Tech</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#press">Press</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-menu-btn" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
-    <div class="nav-links">
-      <a href="#timeline">Career</a>
-      <a href="#ondc">ONDC</a>
-      <a href="#littech">Lit Tech</a>
-      <a href="#impact">Impact</a>
-      <a href="#press">Press</a>
-      <a href="#contact" class="nav-cta">GET IN TOUCH</a>
-    </div>
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════════════════════════════ HERO -->
-<header class="hero" id="top">
-  <div class="hero-label">Digital Public Infrastructure · B2B Commerce · Social Impact</div>
-  <h1>Building systems that bring<br><em>first-time sellers</em> online<br>at national scale.</h1>
-  <p class="hero-sub">17+ years across digital public infrastructure, B2B platforms, and brand communication. Among the first 20 employees at ONDC, where I led social-sector growth, operationalised government partnerships, and scaled digital adoption for MSMEs and Self-Help Groups across India.</p>
-
-  <div class="hero-badges">
-    <div class="badge">
-      <div class="badge-num">17+</div>
-      <div class="badge-label">Years of<br>Experience</div>
-    </div>
-    <div class="badge">
-      <div class="badge-num">₹55Cr+</div>
-      <div class="badge-label">Cumulative<br>GMV Driven</div>
-    </div>
-    <div class="badge">
-      <div class="badge-num">120K+</div>
-      <div class="badge-label">MSMEs<br>Enabled</div>
-    </div>
-    <div class="badge">
-      <div class="badge-num" style="font-size:16px">🏆</div>
-      <div class="badge-label">Guinness<br>World Record</div>
-    </div>
-  </div>
-
-  <div class="hero-actions">
-    <a href="assets/docs/Rahul_Antony_CV_Mar2026.pdf" class="btn btn-primary" download>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
-      Download CV
-    </a>
-    <a href="https://linkedin.com/in/antonyrahul" target="_blank" class="btn btn-outline">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      LinkedIn
-    </a>
-    <a href="mailto:antony.rahul@gmail.com" class="btn btn-outline">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
-      Email
-    </a>
-  </div>
-</header>
-
-<!-- ═══════════════════════════════════════════════════════════ TIMELINE -->
-<section class="section section-alt" id="timeline">
-  <div class="section-inner">
-    <div class="section-label">Career Journey</div>
-    <div class="section-title">From Pixels to Platforms to People</div>
-    <div class="section-desc">Three eras of building — each one building on the last, widening the scope from campaigns to platforms to national infrastructure.</div>
-
-    <div class="timeline">
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-date">2010 — 2015</div>
-        <div class="tl-role">Strategic Communication</div>
-        <div class="tl-org">Ogilvy & Mather · Bates/WPP (Dubai)</div>
-        <div class="tl-desc">Global campaigns for Lenovo across Western Europe, APAC, and Latin America. Managed luxury retail accounts (Swatch Group, Rivoli). Promoted to Group Account Manager within one year.</div>
-        <span class="tl-tag tl-tag-comms">Communication</span>
-      </div>
-
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-date">2018 — 2021</div>
-        <div class="tl-role">Platform Builder</div>
-        <div class="tl-org">Lit Technologies → Udaan · Kerala</div>
-        <div class="tl-desc">Built a B2B commerce platform from scratch — product design, category management, CRM operations. ₹55Cr+ GMV, 3,258 kirana stores, acquired by Udaan.</div>
-        <span class="tl-tag tl-tag-builder">Builder</span>
-      </div>
-
-      <div class="tl-item reveal">
-        <div class="tl-dot"></div>
-        <div class="tl-date">2022 — 2025</div>
-        <div class="tl-role">Digital Public Infrastructure</div>
-        <div class="tl-org">ONDC (DPIIT, Govt. of India) · New Delhi</div>
-        <div class="tl-desc">Led social-sector growth and digital programs. Built ONDC Academy, operationalised ministry partnerships, enabled 120K+ MSMEs. Guinness World Record campaign.</div>
-        <span class="tl-tag tl-tag-dpi">DPI / Social Impact</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════ ONDC -->
-<section class="section" id="ondc">
-  <div class="section-inner">
-    <div class="section-label">ONDC · 2022–2025</div>
-    <div class="section-title">Building India's Commerce Infrastructure</div>
-    <div class="section-desc">Among the first 20 employees at India's DPIIT-backed national commerce protocol. Led digital programs reporting to the CBO, then promoted to Lead Category Growth — Social Sector, reporting directly to the CEO.</div>
-
-    <div class="ondc-grid">
-      <div class="initiative-card reveal">
-        <div class="ic-icon">🎓</div>
-        <div class="ic-title">ONDC Academy</div>
-        <div class="ic-desc">Built a digital education platform from scratch. Secured NCVET Dual Awarding Body accreditation. Certification made mandatory for network participation.</div>
-        <div class="ic-metric">
-          <span class="ic-metric-num">3,000+</span>
-          <span class="ic-metric-label">registered users · 550+ certified</span>
-        </div>
-      </div>
-
-      <div class="initiative-card reveal">
-        <div class="ic-icon">💬</div>
-        <div class="ic-title">ONDC Sahayak</div>
-        <div class="ic-desc">Engineered a WhatsApp chatbot for seller onboarding and support. Autonomously resolved the vast majority of user queries at scale.</div>
-        <div class="ic-metric">
-          <span class="ic-metric-num">85%</span>
-          <span class="ic-metric-label">autonomous resolution · 17K+ unique users</span>
-        </div>
-      </div>
-
-      <div class="initiative-card reveal">
-        <div class="ic-icon">📱</div>
-        <div class="ic-title">Seller QR Code</div>
-        <div class="ic-desc">Launched interoperable QR codes enabling MSMEs to create discoverable digital storefronts across the open network instantly.</div>
-        <div class="ic-metric">
-          <span class="ic-metric-num">120K+</span>
-          <span class="ic-metric-label">MSMEs enabled</span>
-        </div>
-      </div>
-
-      <div class="initiative-card reveal">
-        <div class="ic-icon">🌐</div>
-        <div class="ic-title">National Portal (ondc.org)</div>
-        <div class="ic-desc">Built and scaled across 14 languages. Coined the tagline "Everyone's Commerce." Managed all web presence and comms for government events.</div>
-        <div class="ic-metric">
-          <span class="ic-metric-num">2M+</span>
-          <span class="ic-metric-label">visitors · 69% engagement rate</span>
-        </div>
-      </div>
-
-      <div class="initiative-card reveal">
-        <div class="ic-icon">🤝</div>
-        <div class="ic-title">Government Partnerships</div>
-        <div class="ic-desc">Operationalised partnerships with Ministry of Rural Development and Ministry of Textiles. Enabled first-time digital sales for artisans and SHGs across 15+ emporiums.</div>
-        <div class="ic-metric">
-          <span class="ic-metric-num">₹5.13Cr</span>
-          <span class="ic-metric-label">AP Women's Day · Guinness World Record</span>
-        </div>
-      </div>
-
-      <div class="initiative-card reveal">
-        <div class="ic-icon">✅</div>
-        <div class="ic-title">Verifiable Credentials</div>
-        <div class="ic-desc">Supported Bill & Melinda Gates Foundation-funded initiative to enhance seller trust. Scaled credentialed sellers (GI Tag, Women-Owned, Organic).</div>
-        <div class="ic-metric">
-          <span class="ic-metric-num">40%</span>
-          <span class="ic-metric-label">increase in credential adoption</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="ondc-press">
-      <a href="https://www.thehindu.com/news/national/andhra-pradesh/aps-self-help-group-women-set-four-world-records-including-a-guinness-record/article69306775.ece" target="_blank" class="press-chip">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-        The Hindu — Guinness Record
-      </a>
-      <a href="https://government.economictimes.indiatimes.com/news/technology/ondc-launches-interoperable-qr-code-to-empower-indian-ecommerce-sellers/112152726" target="_blank" class="press-chip">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-        ET Govt — QR Code Launch
-      </a>
-      <a href="https://grameenfoundation.org/documents/Assisted-e-commerce-and-ONDC-A-new-revenue-source-for-BC-Agents-in-India.pdf" target="_blank" class="press-chip">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-        Grameen Foundation — Case Study
-      </a>
-      <a href="https://idronline.org/article/diversity-inclusion/making-ondc-accessible-for-women-led-small-enterprises/" target="_blank" class="press-chip">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
-        IDR Online — Women-Led Enterprises
-      </a>
-    </div>
-
-    <div class="ondc-cta">
-      <a href="ondc.html" class="btn btn-primary">View Full ONDC Case Study →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════════════════════════ LIT TECH -->
-<section class="section section-alt" id="littech">
-  <div class="section-inner">
-    <div class="section-label">Lit Technologies → Udaan · 2018–2021</div>
-    <div class="section-title">From Concept to Acquisition</div>
-    <div class="section-desc">Built a B2B commerce platform for kirana stores from the ground up — product design, category strategy, CRM operations — leading to acquisition by Udaan.</div>
-
-    <div class="littech-hero reveal">
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-inner">
       <div>
-        <p style="font-size:15px;color:var(--text);line-height:1.7;margin-bottom:16px">Led the design team, built the full product suite — consumer ordering app, delivery management system, warehouse operations — for a user base where 70%+ were local language speakers. Generated ₹55Cr+ GMV across 20 categories and 1,700 SKUs, serving 3,258 kirana stores in Trivandrum.</p>
-        <p style="font-size:15px;color:var(--text);line-height:1.7;margin-bottom:16px">Post-acquisition by Udaan, achieved 100% user retention during platform migration and launched Kerala expansion in Kochi within three months.</p>
-        <div class="littech-stats">
-          <div class="lt-stat"><div class="lt-stat-num">₹55Cr+</div><div class="lt-stat-label">Total GMV (inc. Udaan)</div></div>
-          <div class="lt-stat"><div class="lt-stat-num">3,258</div><div class="lt-stat-label">Kirana Stores</div></div>
-          <div class="lt-stat"><div class="lt-stat-num">1,700</div><div class="lt-stat-label">Product SKUs</div></div>
-          <div class="lt-stat"><div class="lt-stat-num">94.6%</div><div class="lt-stat-label">Fulfilment Rate</div></div>
+        <div class="hero-label">Ecosystem Builder</div>
+        <h1>From Pixels to People,<br><span class="italic">building systems that scale.</span></h1>
+        <p class="hero-desc">
+          17+ years spanning digital public infrastructure, B2B commerce platforms, and brand communication. Among the first 20 employees at ONDC — India's national commerce protocol — where I operationalised government partnerships and scaled digital adoption for MSMEs, artisans, and Self-Help Groups.
+        </p>
+        <div class="hero-ctas">
+          <a href="assets/docs/Rahul_Antony_CV.pdf" class="btn btn-primary" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download CV
+          </a>
+          <a href="https://www.linkedin.com/in/antonyrahul" class="btn btn-outline" target="_blank">
+            LinkedIn
+          </a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
         </div>
-        <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a href="lit-tech.html" class="btn btn-primary">View Full Case Study →</a>
-          <a href="dashboard.html" target="_blank" class="btn btn-outline">📊 Explore Live Dashboard</a>
+      </div>
+      <div class="hero-metrics">
+        <div class="hero-metric">
+          <div class="hero-metric-value">17+</div>
+          <div class="hero-metric-label">Years of Experience</div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-value">₹55Cr+</div>
+          <div class="hero-metric-label">GMV Generated (B2B)</div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-value">120K+</div>
+          <div class="hero-metric-label">MSMEs Enabled (ONDC)</div>
+        </div>
+        <div class="hero-metric">
+          <div class="hero-metric-value">Guinness</div>
+          <div class="hero-metric-label">World Record (AP, 2025)</div>
         </div>
       </div>
-      <div class="app-preview">
-        <img src="assets/images/consumer-app/slide07_img02.png" alt="LitApp Home" onclick="openLightbox(this)">
-        <img src="assets/images/consumer-app/slide12_img01.png" alt="Product Detail" onclick="openLightbox(this)">
-        <img src="assets/images/delivery-app/slide17_img02.png" alt="Delivery App" onclick="openLightbox(this)">
-      </div>
-    </div>
-
-    <!-- Video placeholder -->
-    <div class="reveal" style="margin-top:24px">
-      <div style="background:#000;border-radius:12px;overflow:hidden;position:relative;padding-bottom:56.25%;height:0">
-        <!-- PLACEHOLDER: Replace this YouTube URL with your uploaded video -->
-        <iframe 
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-          style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" 
-          allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" 
-          allowfullscreen
-          title="Lit Technologies Journey"
-          loading="lazy">
-        </iframe>
-      </div>
-      <p style="font-size:12px;color:var(--muted);margin-top:8px;text-align:center">Lit Technologies — A customer placing an order on the platform</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════ IMPACT -->
+<!-- ═══════════ CAREER TIMELINE ═══════════ -->
+<section class="section section-alt" id="journey">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Career Journey</div>
+      <h2 class="section-title">The path so far</h2>
+      <p class="section-desc">From international operations and market research to global brand campaigns to building commerce platforms to architecting national digital infrastructure — each phase built the toolkit for the next.</p>
+    </div>
+    <div class="timeline-track reveal">
+      <div class="timeline-era">
+        <div class="timeline-dates">2003 – 2008</div>
+        <div class="timeline-company">The Foundation</div>
+        <div class="timeline-role">UPS · Damac Properties · Kantar TNS · AC Nielsen · Dubai</div>
+        <div class="timeline-highlights">
+          Started with global logistics at UPS — corporate accounts, daily operations, sales coordination. Moved to Damac Properties managing HNWI real estate clients and sales training. Research internships at Kantar TNS (RTD Beverages, MENA) and AC Nielsen (Philip Morris) built an analytical foundation. International exposure from the start.
+        </div>
+      </div>
+      <div class="timeline-era">
+        <div class="timeline-dates">2010 – 2015</div>
+        <div class="timeline-company">The Communicator</div>
+        <div class="timeline-role">Ogilvy & Mather · Bates/WPP · Dubai & Bangalore</div>
+        <div class="timeline-highlights">
+          Global campaigns for Lenovo Worldwide across Western Europe, APAC, Latin America. Luxury retail for Rivoli/Swatch Group. Learned to translate complex propositions for diverse stakeholders — a skill that later proved essential for explaining DPI to government ministries.
+        </div>
+      </div>
+      <div class="timeline-era">
+        <div class="timeline-dates">2018 – 2021</div>
+        <div class="timeline-company">The Builder</div>
+        <div class="timeline-role">Lit Technologies (acq. by Udaan) · Trivandrum, Kerala</div>
+        <div class="timeline-highlights">
+          Built a B2B kirana commerce platform from scratch — product design (UI/UX), category management across 1,700 SKUs, customer operations. Generated ₹55Cr+ GMV. 100% user retention during Udaan acquisition. Designed delivery management systems tracking 12M+ kg of goods. This phase taught first-principles building and the limits of closed-loop platforms.
+        </div>
+      </div>
+      <div class="timeline-era">
+        <div class="timeline-dates">2022 – 2025</div>
+        <div class="timeline-company">The Systems Architect</div>
+        <div class="timeline-role">ONDC (DPIIT, Govt. of India) · New Delhi</div>
+        <div class="timeline-highlights">
+          Among the first 20 hires at India's national commerce protocol. Led social-sector growth and digital programs. Operationalised partnerships with MoRD, MoT, and state bodies. Built foundational tools (Academy, Sahayak, Seller QR, Saarthi). Facilitated Guinness World Record campaign. Scaled credentialed sellers across the network.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ONDC DEEP DIVE ═══════════ -->
+<section class="section" id="ondc">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Featured: ONDC (2022–2025)</div>
+      <h2 class="section-title">Architecting India's Digital Commerce Infrastructure</h2>
+      <p class="section-desc">As Lead — Social Sector Growth & Digital Programs, I built foundational tools, operationalised government partnerships, and drove measurable social impact on a national protocol.</p>
+    </div>
+
+    <!-- ONDC Metrics -->
+    <div class="metrics-grid reveal" style="margin-bottom: 40px;">
+      <div class="metric-card">
+        <div class="metric-card-value">2M+</div>
+        <div class="metric-card-label">Website Visitors</div>
+        <div class="metric-card-sub">ondc.org · 14 languages · 69% engagement</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-card-value">3,000+</div>
+        <div class="metric-card-label">Academy Users</div>
+        <div class="metric-card-sub">NCVET accredited · certification mandatory</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-card-value">120K+</div>
+        <div class="metric-card-label">MSMEs on QR Code</div>
+        <div class="metric-card-sub">Instant digital storefront discovery</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-card-value">85%</div>
+        <div class="metric-card-label">Auto Query Resolution</div>
+        <div class="metric-card-sub">ONDC Sahayak chatbot · 17K+ users</div>
+      </div>
+    </div>
+
+    <!-- ONDC Initiatives -->
+    <div class="initiatives-grid reveal">
+      <div class="initiative-card">
+        <div class="initiative-icon">🎓</div>
+        <div class="initiative-title">ONDC Academy</div>
+        <div class="initiative-desc">Built from scratch — digital education platform for network participants. Secured NCVET Dual Awarding Body accreditation. Certification made mandatory for network participation.</div>
+        <div class="initiative-stat">550+ certified · 40+ hrs content</div>
+      </div>
+      <div class="initiative-card">
+        <div class="initiative-icon">💬</div>
+        <div class="initiative-title">ONDC Sahayak</div>
+        <div class="initiative-desc">WhatsApp chatbot providing scalable seller onboarding support. Autonomously resolved 85% of queries across a rapidly growing national user base.</div>
+        <div class="initiative-stat">17K+ unique users</div>
+      </div>
+      <div class="initiative-card">
+        <div class="initiative-icon">📱</div>
+        <div class="initiative-title">Seller QR Code</div>
+        <div class="initiative-desc">Interoperable QR code enabling instant digital storefront discovery and catalogue access for MSMEs across the ONDC network.</div>
+        <div class="initiative-stat">120K+ MSMEs enabled</div>
+      </div>
+      <div class="initiative-card">
+        <div class="initiative-icon">🔧</div>
+        <div class="initiative-title">ONDC Saarthi</div>
+        <div class="initiative-desc">v1.0 developer reference app (UI/UX design) that accelerated third-party integration and reduced network onboarding time for participants.</div>
+        <div class="initiative-stat">Foundation for ecosystem onboarding</div>
+      </div>
+      <div class="initiative-card">
+        <div class="initiative-icon">🤝</div>
+        <div class="initiative-title">Government Partnerships</div>
+        <div class="initiative-desc">Operationalised partnerships with Ministry of Rural Development and Ministry of Textiles. Enabled first-ever digital sales for artisans and SHGs across 15+ state and central emporiums.</div>
+        <div class="initiative-stat">MoRD · MoT · TRIFED · AP-MEPMA</div>
+      </div>
+      <div class="initiative-card">
+        <div class="initiative-icon">🏆</div>
+        <div class="initiative-title">AP Women's Day Campaign</div>
+        <div class="initiative-desc">Facilitated a campaign generating 3 lakh orders worth ₹5.13 crore in one week for women entrepreneurs in Andhra Pradesh.</div>
+        <div class="initiative-stat">Official Guinness World Record</div>
+      </div>
+    </div>
+
+    <!-- ONDC Social Impact -->
+    <div class="reveal" style="margin-top: 48px; padding: 32px; background: var(--bg-subtle); border-radius: var(--radius); border: 1px solid var(--border);">
+      <h3 style="margin-bottom: 16px;">Social Impact & Seller Trust</h3>
+      <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 16px;">
+        Supported a Bill & Melinda Gates Foundation-funded initiative to enhance seller trust and verification. Increased adoption of verifiable credentials (GI Tag, Women-Owned, Organic) by 40%. Authored a Supply Playbook that reversed sector de-growth by improving catalogue quality and fulfilment rates for rural and first-time digital sellers. Scaled credentialed sellers from 104 to 497 within the tracked cohort, and expanded network-wide credentials from 6K to 11K sellers.
+      </p>
+      <div style="margin-top: 24px;">
+        <a href="ondc.html" class="btn btn-primary">View Full ONDC Case Study →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ LIT TECH / PRODUCT PORTFOLIO ═══════════ -->
+<section class="section section-alt" id="littech">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Product Portfolio: Lit Technologies (2018–2021)</div>
+      <h2 class="section-title">Building B2B Commerce from Scratch</h2>
+      <p class="section-desc">Led design, category strategy, and operations for a B2B kirana marketplace — from first wireframe to ₹55Cr+ GMV and acquisition by Udaan. Every screen below was designed and shipped by me.</p>
+    </div>
+
+    <!-- Key metrics row -->
+    <div class="metrics-grid reveal" style="margin-bottom: 40px;">
+      <div class="metric-card">
+        <div class="metric-card-value">₹55Cr+</div>
+        <div class="metric-card-label">Total GMV</div>
+        <div class="metric-card-sub">Mar 2018 – Oct 2020 (incl. Udaan)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-card-value">3,258</div>
+        <div class="metric-card-label">Kirana Stores</div>
+        <div class="metric-card-sub">Active buyers · 28% loyal (50+ orders)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-card-value">1,700</div>
+        <div class="metric-card-label">Product SKUs</div>
+        <div class="metric-card-sub">20 categories · national & regional brands</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-card-value">100%</div>
+        <div class="metric-card-label">Retention on Migration</div>
+        <div class="metric-card-sub">Lit Tech → Udaan platform</div>
+      </div>
+    </div>
+
+    <!-- B2B Consumer App Gallery -->
+    <div class="reveal">
+      <h3 style="margin-bottom: 8px;">B2B Ordering App</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">Kirana store ordering app — vernacular-first, 70%+ local language users. Click any screen to enlarge.</p>
+      <div class="gallery-scroll">
+        <div class="gallery-item" onclick="openLightbox('assets/images/littech/app-home.png','Home Screen')">
+          <img src="assets/images/littech/app-home.png" alt="LitApp Home" loading="lazy">
+          <div class="gallery-item-label">Home</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/littech/app-categories.png','All Categories')">
+          <img src="assets/images/littech/app-categories.png" alt="Categories" loading="lazy">
+          <div class="gallery-item-label">Categories</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/littech/app-category-listing.png','Category Listing')">
+          <img src="assets/images/littech/app-category-listing.png" alt="Category Listing" loading="lazy">
+          <div class="gallery-item-label">Category View</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/littech/app-product-listing.png','Product Listing with Deals & Stock')">
+          <img src="assets/images/littech/app-product-listing.png" alt="Product Listing" loading="lazy">
+          <div class="gallery-item-label">Products</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/littech/app-product-detail.png','Product Detail — Pricing, MOQ, Returns')">
+          <img src="assets/images/littech/app-product-detail.png" alt="Product Detail" loading="lazy">
+          <div class="gallery-item-label">Product Detail</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/littech/app-cart.png','Cart & Checkout')">
+          <img src="assets/images/littech/app-cart.png" alt="Cart" loading="lazy">
+          <div class="gallery-item-label">Cart</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/littech/app-offers.png','Offers Page')">
+          <img src="assets/images/littech/app-offers.png" alt="Offers" loading="lazy">
+          <div class="gallery-item-label">Offers</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/littech/app-orders.png','Order Status')">
+          <img src="assets/images/littech/app-orders.png" alt="Orders" loading="lazy">
+          <div class="gallery-item-label">Orders</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/littech/app-order-detail.png','Order Detail')">
+          <img src="assets/images/littech/app-order-detail.png" alt="Order Detail" loading="lazy">
+          <div class="gallery-item-label">Order Detail</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delivery App Gallery -->
+    <div class="reveal" style="margin-top: 40px;">
+      <h3 style="margin-bottom: 8px;">Delivery & Routing Management</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">Internal delivery app tracking 12M+ kg of goods. Route optimization, cash reconciliation, return management.</p>
+      <div class="gallery-scroll">
+        <div class="gallery-item" onclick="openLightbox('assets/images/delivery/delivery-routes.png','Route Assignments')">
+          <img src="assets/images/delivery/delivery-routes.png" alt="Routes" loading="lazy">
+          <div class="gallery-item-label">Routes</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/delivery/delivery-store-list.png','Store List Per Route')">
+          <img src="assets/images/delivery/delivery-store-list.png" alt="Store List" loading="lazy">
+          <div class="gallery-item-label">Store List</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/delivery/delivery-route-map.png','Google Maps Route')">
+          <img src="assets/images/delivery/delivery-route-map.png" alt="Route Map" loading="lazy">
+          <div class="gallery-item-label">Route Map</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/delivery/delivery-store-task.png','Store Task — Drop & Pick')">
+          <img src="assets/images/delivery/delivery-store-task.png" alt="Store Task" loading="lazy">
+          <div class="gallery-item-label">Store Tasks</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/delivery/delivery-task-detail.png','Task Detail — Items & Payment')">
+          <img src="assets/images/delivery/delivery-task-detail.png" alt="Task Detail" loading="lazy">
+          <div class="gallery-item-label">Task Detail</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('assets/images/delivery/delivery-status.png','Delivery Status Management')">
+          <img src="assets/images/delivery/delivery-status.png" alt="Delivery Status" loading="lazy">
+          <div class="gallery-item-label">Status Mgmt</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="reveal" style="margin-top: 40px;">
+      <h3 style="margin-bottom: 8px;">Platform in Action</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">A day in our operations — from warehouse stacking and route planning to last-mile delivery across kirana stores in Trivandrum.</p>
+      <!-- TODO: Replace with actual YouTube URL after upload -->
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/9obz1Z3U-dE" title="Lit Technologies — A Day in Operations" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 8px; font-style: italic;">
+      </p>
+    </div>
+
+    <!-- Dashboard Preview -->
+    <div class="reveal" style="margin-top: 48px;">
+      <h3 style="margin-bottom: 8px;">Sales Analytics Dashboard</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">
+        Built from real operational data (Mar 2018 – May 2020). Interactive analytics covering revenue, categories, returns, margins, and customer segmentation. 
+        <span style="font-size: 0.82rem; color: var(--accent); font-weight: 600;">Note: The cumulative sales figure of ₹55Cr+ reflects the period through Oct 2020, including the post-acquisition Udaan phase. This dashboard covers the Lit Technologies operational period only.</span>
+      </p>
+      <div class="dashboard-embed">
+        <iframe src="dashboard.html" title="Kirana B2B Sales Dashboard" loading="lazy"></iframe>
+        <div class="dashboard-embed-note">
+          Interactive dashboard — scroll and switch tabs to explore.
+          <a href="dashboard.html" target="_blank" style="margin-left: 8px; font-weight: 700; color: var(--accent);">Open Full Dashboard →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3rd Party Projects -->
+    <div class="reveal" style="margin-top: 48px;">
+      <h3 style="margin-bottom: 8px;">Additional Design Projects</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Third-party projects undertaken during the Lit Technologies period, demonstrating design versatility beyond B2B grocery.</p>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-card-img" style="background: #f0fdf4;">
+            <img src="assets/images/thirdparty/jeevani-b2c.png" alt="Jeevani Sanjeevani">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-tag">Kerala Govt × Suntec Group</div>
+            <div class="project-card-title">Jeevani Sanjeevani</div>
+            <div class="project-card-desc">Farm-to-consumer platform digitising Horticorp stalls. Designed B2C ordering app, rider/delivery partner app, and design guidelines for rural store operators.</div>
+            <div class="project-card-meta">
+              <span>B2C + Rider App</span>
+              <span>Agriculture Dept.</span>
+              <span><a href="https://www.figma.com/proto/5b9ZIsEitZXKbXiWa3V5oh/Kerala-Food-Platform---Jeevani-Sanjeevani---Rider---Delivery-App" target="_blank" style="color: var(--accent);">View Figma Prototype →</a></span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-card-img" style="background: #fef3c7;">
+            <img src="assets/images/thirdparty/hhys-crm.png" alt="HHYS Inframart">
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-tag">HHYS Inframart · Kerala</div>
+            <div class="project-card-title">B2C Ecommerce + Sales CRM</div>
+            <div class="project-card-desc">Designed a B2C ecommerce app for 4,000+ SKUs (hardware, sanitary, electricals) and an internal CRM app for sales pipeline management and employee task tracking.</div>
+            <div class="project-card-meta">
+              <span>4,000+ SKUs</span>
+              <span>CRM + Ecommerce</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 36px; text-align: center;">
+      <a href="lit-tech.html" class="btn btn-primary">View Full Lit Tech Case Study →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ IMPACT DASHBOARD ═══════════ -->
 <section class="section" id="impact">
-  <div class="section-inner">
-    <div class="section-label">Career Impact</div>
-    <div class="section-title">Numbers That Tell the Story</div>
-    <div class="section-desc">Quantified outcomes across three eras of building — from advertising campaigns to national digital infrastructure.</div>
-
-    <div class="impact-grid">
-      <div class="impact-card reveal">
-        <div class="impact-num">17<span class="impact-unit">+</span></div>
-        <div class="impact-label">Years of multidisciplinary experience</div>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Career Impact</div>
+      <h2 class="section-title">Numbers that matter</h2>
+      <p class="section-desc">Quantified outcomes across three career eras — from global advertising campaigns to national digital infrastructure.</p>
+    </div>
+    <div class="metrics-grid reveal">
+      <div class="metric-card">
+        <div class="metric-card-value">₹55Cr<span class="accent">+</span></div>
+        <div class="metric-card-label">B2B GMV Generated</div>
+        <div class="metric-card-sub">Lit Technologies + Udaan · 2018–2021</div>
       </div>
-      <div class="impact-card reveal">
-        <div class="impact-num">₹55<span class="impact-unit">Cr+</span></div>
-        <div class="impact-label">Cumulative GMV driven</div>
+      <div class="metric-card">
+        <div class="metric-card-value">₹5.13Cr</div>
+        <div class="metric-card-label">AP Campaign GMV</div>
+        <div class="metric-card-sub">3 lakh orders in 1 week · Guinness Record</div>
       </div>
-      <div class="impact-card reveal">
-        <div class="impact-num">120K<span class="impact-unit">+</span></div>
-        <div class="impact-label">MSMEs enabled on ONDC</div>
+      <div class="metric-card">
+        <div class="metric-card-value">120K<span class="accent">+</span></div>
+        <div class="metric-card-label">MSMEs Enabled</div>
+        <div class="metric-card-sub">ONDC Seller QR Code · digital storefronts</div>
       </div>
-      <div class="impact-card reveal">
-        <div class="impact-num">3<span class="impact-unit">lakh</span></div>
-        <div class="impact-label">Orders in one week (AP Women's Day)</div>
+      <div class="metric-card">
+        <div class="metric-card-value">14</div>
+        <div class="metric-card-label">Languages</div>
+        <div class="metric-card-sub">ondc.org national portal · 2M+ visitors</div>
       </div>
-      <div class="impact-card reveal">
-        <div class="impact-num">2M<span class="impact-unit">+</span></div>
-        <div class="impact-label">Visitors to ondc.org</div>
+      <div class="metric-card">
+        <div class="metric-card-value">40<span class="accent">%</span></div>
+        <div class="metric-card-label">Credentials Adoption</div>
+        <div class="metric-card-sub">BMGF-funded · GI Tag, Women-Owned, Organic</div>
       </div>
-      <div class="impact-card reveal">
-        <div class="impact-num">14</div>
-        <div class="impact-label">Languages (national portal)</div>
+      <div class="metric-card">
+        <div class="metric-card-value">3,258</div>
+        <div class="metric-card-label">Kirana Stores Served</div>
+        <div class="metric-card-sub">Lit Technologies · 94.6% fulfilment rate</div>
       </div>
-      <div class="impact-card reveal">
-        <div class="impact-num">85<span class="impact-unit">%</span></div>
-        <div class="impact-label">Chatbot resolution rate</div>
+      <div class="metric-card">
+        <div class="metric-card-value">12M<span class="accent">+</span> kg</div>
+        <div class="metric-card-label">Goods Delivered</div>
+        <div class="metric-card-sub">Delivery app · 28 months</div>
       </div>
-      <div class="impact-card reveal">
-        <div class="impact-num">3,258</div>
-        <div class="impact-label">Kirana stores served</div>
+      <div class="metric-card">
+        <div class="metric-card-value">15<span class="accent">+</span></div>
+        <div class="metric-card-label">Govt. Emporiums</div>
+        <div class="metric-card-sub">Central Cottage, TRIFED, IndiaHandmade & more</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════ PRESS -->
+<!-- ═══════════ ADVERTISING (Condensed) ═══════════ -->
+<section class="section section-subtle" id="advertising">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Earlier Career: Advertising & Consulting</div>
+      <h2 class="section-title">The communication foundation</h2>
+      <p class="section-desc">Global campaign management and strategic communication that became the foundation for explaining complex digital infrastructure to government ministries, rural SHGs, and network participants.</p>
+    </div>
+    <div class="projects-grid reveal">
+      <div class="project-card" style="border-left: 3px solid var(--accent);">
+        <div class="project-card-body">
+          <div class="project-card-tag">Ogilvy & Mather · 2010–2013</div>
+          <div class="project-card-title">Lenovo Worldwide</div>
+          <div class="project-card-desc">
+            Group Account Manager handling Western Europe, APAC, Latin America. Led Think Range go-to-market for Large Enterprise, SMB, Government, and Education sectors. Pioneered shift from tactical messaging to evidence-based content strategy for the education sector. Launched first Lenovo tablet and first Intel-based smartphone in Western Europe.
+          </div>
+          <div class="project-card-meta">
+            <span>Outstanding Debutant 2011</span>
+            <span>Most Innovative Creative 2012</span>
+          </div>
+        </div>
+      </div>
+      <div class="project-card" style="border-left: 3px solid var(--accent);">
+        <div class="project-card-body">
+          <div class="project-card-tag">Bates/WPP · 2013–2015 · Dubai</div>
+          <div class="project-card-title">Luxury Retail, Government & Real Estate</div>
+          <div class="project-card-desc">
+            Account lead for Rivoli Group, Swatch Group (Cartier, Omega, Rado, Tissot), Landmark Group, Dubai Media Office (Govt. of UAE), Deyaar Properties, and Commercial Bank Qatar. Managed ATL/BTL/digital campaigns including international photo-shoots and product launches.
+          </div>
+          <div class="project-card-meta">
+            <span>Team of 3</span>
+            <span>Multi-sector portfolio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal" style="margin-top: 24px;">
+      <p style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600; margin-bottom: 12px;">Brands Managed</p>
+      <div class="brands-row">
+        <span class="brand-tag">Lenovo</span>
+        <span class="brand-tag">Cartier</span>
+        <span class="brand-tag">Omega</span>
+        <span class="brand-tag">Swatch Group</span>
+        <span class="brand-tag">Coke</span>
+        <span class="brand-tag">HUL</span>
+        <span class="brand-tag">Nestlé</span>
+        <span class="brand-tag">P&G</span>
+        <span class="brand-tag">PepsiCo</span>
+        <span class="brand-tag">Reckitt</span>
+        <span class="brand-tag">Unilever</span>
+        <span class="brand-tag">Dubai Media Office</span>
+        <span class="brand-tag">Kellogg's</span>
+        <span class="brand-tag">Tom Ford</span>
+        <span class="brand-tag">Harry Winston</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRESS & RECOGNITION ═══════════ -->
 <section class="section section-alt" id="press">
-  <div class="section-inner">
-    <div class="section-label">Press & Recognition</div>
-    <div class="section-title">In the News</div>
-    <div class="section-desc">Coverage and recognition from national media, international foundations, and industry bodies.</div>
-
-    <div class="press-grid">
-      <a href="https://www.thehindu.com/news/national/andhra-pradesh/aps-self-help-group-women-set-four-world-records-including-a-guinness-record/article69306775.ece" target="_blank" class="press-card reveal">
-        <div class="press-icon">📰</div>
-        <div>
-          <div class="press-pub">The Hindu</div>
-          <div class="press-title">AP's Self-Help Group women set four world records, including a Guinness Record</div>
-          <div class="press-date">2025</div>
-        </div>
-      </a>
-      <a href="https://www.guinnessworldrecords.com/world-records/776064-most-users-in-an-e-business%C2%A0video-lesson" target="_blank" class="press-card reveal">
-        <div class="press-icon">🏆</div>
-        <div>
-          <div class="press-pub">Guinness World Records</div>
-          <div class="press-title">Most users in an e-business video lesson — Official Record</div>
-          <div class="press-date">2025</div>
-        </div>
-      </a>
-      <a href="https://government.economictimes.indiatimes.com/news/technology/ondc-launches-interoperable-qr-code-to-empower-indian-ecommerce-sellers/112152726" target="_blank" class="press-card reveal">
-        <div class="press-icon">📰</div>
-        <div>
-          <div class="press-pub">ET Government</div>
-          <div class="press-title">ONDC launches interoperable QR code to empower Indian e-commerce sellers</div>
-          <div class="press-date">2024</div>
-        </div>
-      </a>
-      <a href="https://grameenfoundation.org/documents/Assisted-e-commerce-and-ONDC-A-new-revenue-source-for-BC-Agents-in-India.pdf" target="_blank" class="press-card reveal">
-        <div class="press-icon">📄</div>
-        <div>
-          <div class="press-pub">Grameen Foundation</div>
-          <div class="press-title">Assisted e-commerce and ONDC — Case Study</div>
-          <div class="press-date">2024</div>
-        </div>
-      </a>
-      <a href="https://idronline.org/article/diversity-inclusion/making-ondc-accessible-for-women-led-small-enterprises/" target="_blank" class="press-card reveal">
-        <div class="press-icon">📰</div>
-        <div>
-          <div class="press-pub">IDR Online</div>
-          <div class="press-title">Making ONDC accessible for women-led small enterprises</div>
-          <div class="press-date">2024</div>
-        </div>
-      </a>
-      <a href="https://www.newindianexpress.com/kochi/2019/May/07/bound-by-an-app-farmers-and-shopowners-grow-by-leaps-and-a-bountiful-1973919.html" target="_blank" class="press-card reveal">
-        <div class="press-icon">📰</div>
-        <div>
-          <div class="press-pub">Indian Express</div>
-          <div class="press-title">Growing by leaps and a bountiful — Lit Technologies</div>
-          <div class="press-date">2019</div>
-        </div>
-      </a>
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Press & Recognition</div>
+      <h2 class="section-title">External validation</h2>
     </div>
-
-    <div style="margin-top:32px;display:flex;flex-wrap:wrap;gap:12px">
-      <div class="badge" style="background:#fff"><div class="badge-label">🏆 Kerala Startup Mission Scale-Up Grant (2018)</div></div>
-      <div class="badge" style="background:#fff"><div class="badge-label">🎨 Most Innovative Creative — Ogilvy (2012)</div></div>
-      <div class="badge" style="background:#fff"><div class="badge-label">⭐ Outstanding Debutant — Ogilvy (2011)</div></div>
+    <div class="press-grid reveal">
+      <a class="press-card" href="https://www.thehindu.com/news/national/andhra-pradesh/aps-self-help-group-women-set-four-world-records-including-a-guinness-record/article69306775.ece" target="_blank">
+        <div class="press-pub">The Hindu</div>
+        <div class="press-title">A.P.'s Self-Help Group women set four world records, including a Guinness Record</div>
+        <div class="press-link">Read Article →</div>
+      </a>
+      <a class="press-card" href="https://www.guinnessworldrecords.com/world-records/776064-most-users-in-an-e-business%C2%A0video-lesson" target="_blank">
+        <div class="press-pub">Guinness World Records</div>
+        <div class="press-title">Most users in an e-business video lesson — Official Record</div>
+        <div class="press-link">View Record →</div>
+      </a>
+      <a class="press-card" href="https://government.economictimes.indiatimes.com/news/technology/ondc-launches-interoperable-qr-code-to-empower-indian-ecommerce-sellers/112152726" target="_blank">
+        <div class="press-pub">ET Government</div>
+        <div class="press-title">ONDC launches interoperable QR code to empower Indian e-commerce sellers</div>
+        <div class="press-link">Read Article →</div>
+      </a>
+      <a class="press-card" href="https://www.thehindu.com/sci-tech/technology/internet/ondc-launches-saarthi-reference-app-for-businesses-to-create-multilingual-buyer-apps/article68629225.ece" target="_blank">
+        <div class="press-pub">The Hindu</div>
+        <div class="press-title">ONDC launches Saarthi reference app for multilingual buyer apps</div>
+        <div class="press-link">Read Article →</div>
+      </a>
+      <a class="press-card" href="https://idronline.org/article/diversity-inclusion/making-ondc-accessible-for-women-led-small-enterprises/" target="_blank">
+        <div class="press-pub">IDR Online</div>
+        <div class="press-title">Making ONDC accessible for women-led small enterprises</div>
+        <div class="press-link">Read Article →</div>
+      </a>
+      <a class="press-card" href="https://grameenfoundation.org/documents/Assisted-e-commerce-and-ONDC-A-new-revenue-source-for-BC-Agents-in-India.pdf" target="_blank">
+        <div class="press-pub">Grameen Foundation</div>
+        <div class="press-title">Assisted e-commerce and ONDC — A new revenue source for BC Agents</div>
+        <div class="press-link">View Case Study →</div>
+      </a>
+      <a class="press-card" href="https://www.newindianexpress.com/kochi/2019/May/07/bound-by-an-app-farmers-and-shopowners-grow-by-leaps-and-a-bountiful-1973919.html" target="_blank">
+        <div class="press-pub">Indian Express</div>
+        <div class="press-title">Growing by leaps and a bountiful — Lit Technologies</div>
+        <div class="press-link">Read Article →</div>
+      </a>
+      <a class="press-card" href="https://yourstory.com/2025/09/odop-join-ondc-piyush-goyal" target="_blank">
+        <div class="press-pub">YourStory</div>
+        <div class="press-title">ODOP to Join ONDC to Help Local Products Grow: Piyush Goyal</div>
+        <div class="press-link">Read Article →</div>
+      </a>
+      <div class="press-card" style="display:flex; flex-direction:column; justify-content:center; align-items:center; background: var(--bg-subtle); border-style: dashed;">
+        <div style="font-size: 0.85rem; color: var(--text-muted); text-align: center;">
+          <strong style="display:block; margin-bottom:4px;">Awards</strong>
+          Kerala Startup Mission Grant (2018)<br>
+          Most Innovative Creative — Ogilvy (2012)<br>
+          Outstanding Debutant — Ogilvy (2011)
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════ CONTACT -->
-<section class="section" id="contact">
-  <div class="section-inner">
-    <div class="section-label">Get in Touch</div>
-    <div class="section-title">Let's Build Something</div>
-    <div class="section-desc">Open to roles in DPI/protocol advisory, ecosystem enablement, and development sector — across India and the Middle East.</div>
+<!-- ═══════════ EDUCATION ═══════════ -->
+<section class="section" style="padding: 48px 0;">
+  <div class="container">
+    <div class="reveal" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+      <div>
+        <div class="section-label">Education</div>
+        <h3 style="margin-bottom: 16px;">Academic Background</h3>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+          <strong>Master of Communication (Advertising)</strong><br>
+          RMIT University, Melbourne — 2010
+        </p>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; margin-top: 12px;">
+          <strong>Bachelor of Commerce (Marketing)</strong><br>
+          University of Wollongong, Dubai — 2006
+        </p>
+      </div>
+      <div>
+        <div class="section-label">Tools & Platforms</div>
+        <h3 style="margin-bottom: 16px;">Technical Toolkit</h3>
+        <div class="brands-row">
+          <span class="brand-tag">Figma</span>
+          <span class="brand-tag">Adobe Suite</span>
+          <span class="brand-tag">Google Analytics</span>
+          <span class="brand-tag">Asana</span>
+          <span class="brand-tag">Freshdesk</span>
+          <span class="brand-tag">N8N Automation</span>
+          <span class="brand-tag">Claude AI</span>
+          <span class="brand-tag">Mixpanel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div class="contact-grid">
+<!-- ═══════════ CONTACT ═══════════ -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">Let's talk</h2>
+      <p class="section-desc">Open to roles in DPI/protocol advisory, ecosystem enablement, and impact-driven program leadership — across India and the Middle East.</p>
+    </div>
+    <div class="contact-grid reveal">
       <div class="contact-info">
         <div class="contact-item">
-          <div class="contact-icon">📧</div>
+          <div class="contact-icon">✉️</div>
           <div>
             <div class="contact-label">Email</div>
-            <a href="mailto:antony.rahul@gmail.com" class="contact-val">antony.rahul@gmail.com</a>
+            <div class="contact-value"><a href="/cdn-cgi/l/email-protection#a6c7c8d2c9c8df88d4c7ced3cae6c1cbc7cfca88c5c9cb"><span class="__cf_email__" data-cfemail="43222d372c2d3a6d31222b362f03242e222a2f6d202c2e">[email&#160;protected]</span></a></div>
           </div>
         </div>
         <div class="contact-item">
           <div class="contact-icon">📱</div>
           <div>
             <div class="contact-label">Phone</div>
-            <div class="contact-val">+91 97427 60141</div>
+            <div class="contact-value"><a href="tel:+919742760141">+91 97427 60141</a></div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">💼</div>
+          <div class="contact-icon">🔗</div>
           <div>
             <div class="contact-label">LinkedIn</div>
-            <a href="https://linkedin.com/in/antonyrahul" target="_blank" class="contact-val">linkedin.com/in/antonyrahul</a>
+            <div class="contact-value"><a href="https://www.linkedin.com/in/antonyrahul" target="_blank">linkedin.com/in/antonyrahul</a></div>
           </div>
         </div>
         <div class="contact-item">
-          <div class="contact-icon">📍</div>
+          <div class="contact-icon">📄</div>
           <div>
-            <div class="contact-label">Based in</div>
-            <div class="contact-val">Kerala, India · Open to relocation</div>
+            <div class="contact-label">Resume</div>
+            <div class="contact-value"><a href="assets/docs/Rahul_Antony_CV.pdf" target="_blank">Download CV (PDF)</a></div>
           </div>
         </div>
-        <div style="margin-top:12px">
-          <a href="assets/docs/Rahul_Antony_CV_Mar2026.pdf" class="btn btn-primary" download>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:16px;height:16px"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
-            Download CV (PDF)
-          </a>
-        </div>
       </div>
-      <form name="contact" method="POST" data-netlify="true" class="contact-form">
-        <input type="hidden" name="form-name" value="contact">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="subject" placeholder="Subject">
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn btn-primary" style="align-self:flex-start">Send Message</button>
-      </form>
+      <div style="background: var(--bg-subtle); border-radius: var(--radius); padding: 32px; border: 1px solid var(--border);">
+        <h3 style="margin-bottom: 8px; font-size: 1.1rem;">What I'm looking for</h3>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 16px;">
+          Roles at the protocol/network layer where I can operationalise large-scale systemic change — not closed-loop implementations. Strong preference for ecosystem building, government program delivery, and impact measurement.
+        </p>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7;">
+          Open to relocation across India and the Middle East (prior Dubai experience). Available for DPI advisory, development sector consulting, and ecosystem enablement roles.
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════ FOOTER -->
+<!-- ═══════════ FOOTER ═══════════ -->
 <footer class="footer">
-  <p>© 2026 Rahul Antony · Built with intent, not templates.</p>
+  <div class="container">
+    © 2026 Rahul Antony. Built with purpose.
+  </div>
 </footer>
 
-<!-- ═══════════════════════════════════════════════════════════ LIGHTBOX -->
+<!-- ═══════════ LIGHTBOX ═══════════ -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <span class="lightbox-close">✕</span>
-  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-caption" id="lightboxCaption"></div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════ JS -->
-<script>
+<!-- ═══════════ SCRIPTS ═══════════ -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Nav scroll effect
-const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>40)});
-
-// Reveal on scroll
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})
-},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-// Lightbox
-function openLightbox(img){
-  document.getElementById('lightbox-img').src=img.src;
-  document.getElementById('lightbox').classList.add('active');
-  document.body.style.overflow='hidden';
-}
-function closeLightbox(){
-  document.getElementById('lightbox').classList.remove('active');
-  document.body.style.overflow='';
-}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 10);
+});
 
 // Close mobile menu on link click
-document.querySelectorAll('.nav-links a').forEach(a=>{
-  a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open'));
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  });
 });
-</script>
-</body>
-</html>
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => revealObserver.observe(el));
+
+// Lightbox
+function openLightbox(src, caption) {
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightboxCaption').textContent = caption || '';
+  lb.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+// Active nav link on scroll
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const top = section.offsetTop - 100;
