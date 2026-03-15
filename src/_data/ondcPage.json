@@ -1,66 +1,24 @@
 {
-  "pageTitle": "ONDC Case Study — Rahul Antony",
-  "navTitle": "ONDC Case Study",
-  "heroLabel": "Case Study · Oct 2022 – Oct 2025",
-  "heroTitle": "ONDC: Building India's Digital Commerce Infrastructure",
-  "heroDesc": "Among the first 20 employees at ONDC — India's DPIIT-backed national commerce protocol. Led digital programs and social-sector category growth, working across central ministries, state bodies, foundations, and network participants.",
-
   "roleEvolution": {
-    "para1": "Joined ONDC when the team was under 20 people, initially leading <strong>Web Engagement and Programs Management</strong> reporting to the CBO. Later promoted to <strong>Lead Category Growth — Social Sector (SGI)</strong>, reporting directly to the CEO.",
+    "para1": "Joined ONDC when the team was under 20 people, initially leading <strong>Web Engagement and Programs Management</strong> reporting to the CBO. Later promoted to <strong>Lead Category Growth - Social Sector (SGI - Social Government Impact)</strong>",
     "para2": "The role spanned two distinct phases: first, building the foundational digital infrastructure and communications toolkit that the entire network would rely on; second, leveraging that infrastructure to drive social impact and economic inclusion at national scale."
   },
-
-  "phase1Initiatives": [
-    {
-      "icon": "🌐",
-      "title": "National Portal — ondc.org",
-      "description": "Built and scaled the national portal across 14 languages, serving as the single point of contact for all ONDC functions. Coined the network's official tagline: \"Everyone's Commerce.\"",
-      "metrics": [
-        { "value": "2M+", "label": "Total Visitors" },
-        { "value": "69%", "label": "Engagement Rate" },
-        { "value": "14", "label": "Languages" },
-        { "value": "33", "label": "Event Landing Pages" }
-      ],
-      "links": []
-    },
-    {
-      "icon": "🎓",
-      "title": "ONDC Academy",
-      "description": "Created the education platform from scratch. Designed curriculum, coordinated with PwC and NCVET to secure Dual Awarding Body accreditation — empowering ONDC to offer end-to-end vocational education services. Certification was eventually made mandatory for network participation.",
-      "metrics": [
-        { "value": "3,000+", "label": "Registered Users" },
-        { "value": "550+", "label": "Certified Participants" },
-        { "value": "40+", "label": "Hours of Content" },
-        { "value": "12", "label": "Languages" }
-      ],
-      "links": [
-        { "text": "ONDC Academy YouTube", "url": "https://www.youtube.com/@ONDCAcademy" },
-        { "text": "NCVET Awarding Body", "url": "https://ncvet.gov.in/awarding-bodies-3/" }
-      ]
-    },
-    {
-      "icon": "💬",
-      "title": "ONDC Sahayak (WhatsApp Chatbot)",
-      "description": "Engineered a WhatsApp-based support chatbot for seller onboarding and query resolution. Scaled to serve the rapidly growing national user base autonomously.",
-      "metrics": [
-        { "value": "17K+", "label": "Unique Users" },
-        { "value": "85%", "label": "Autonomous Resolution" },
-        { "value": "23K", "label": "Total Responses" }
-      ],
-      "links": []
-    },
-    {
-      "icon": "📱",
-      "title": "Ecosystem Adoption Tools",
-      "description": "<strong>ONDC Seller QR Code:</strong> Launched interoperable QR codes enabling 120K+ MSMEs to create discoverable digital storefronts.<br><strong>ONDC Saarthi:</strong> Designed the v1.0 developer reference app, reducing third-party integration and network onboarding time.<br><strong>Play Store Apps:</strong> Launched official ONDC support applications to combat counterfeit apps and secure the network's digital footprint.",
-      "metrics": [],
-      "links": [
-        { "text": "ET Govt — QR Code Launch", "url": "https://government.economictimes.indiatimes.com/news/technology/ondc-launches-interoperable-qr-code-to-empower-indian-ecommerce-sellers/112152726" },
-        { "text": "The Hindu — Saarthi Launch", "url": "https://www.thehindu.com/sci-tech/technology/internet/ondc-launches-saarthi-reference-app-for-businesses-to-create-multilingual-buyer-apps/article68629225.ece" }
-      ]
-    }
-  ],
-
+  "comms": {
+    "para1": "Created the first ONDC adaptable communications — Story Books, Onboarding Flyers — for network participants, sellers, and government ministries to explain the complex concept of an open network. Led comms for high-profile events including Startup Mahakumbh, G20 Summit, and Bharat Tex.",
+    "para2": "Spearheaded the launch of the <strong>Media & Entertainment domain</strong> on the ONDC network, creating a strategic integration pipeline of 13+ organisations including HT Media, Times Network, and Nazara.",
+    "links": [
+      {
+        "text": "Social Sector Story Book (PDF)",
+        "url": "https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/marketing-materials/english_social_sector_handbook_feb24.pdf"
+      },
+      {
+        "text": "Onboarding Flyer (PDF)",
+        "url": "https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/marketing-materials/english_fleet_on_street_flyer_feb24.pdf"
+      }
+    ]
+  },
+  "pageTitle": "ONDC Case Study — Rahul Antony",
+  "heroDesc": "Among the first 20 employees at ONDC, India's DPIIT-backed national commerce protocol. Led digital programs and social-sector category growth, working across central ministries, state bodies, foundations, and network participants.",
   "phase2Initiatives": [
     {
       "icon": "🤝",
@@ -82,9 +40,18 @@
       "title": "Verifiable Credentials (BMGF-funded)",
       "description": "Supported the Bill & Melinda Gates Foundation-funded initiative to enhance seller trust and verification on the network. Increased adoption of verifiable credentials (GI Tag, Women-Owned, Organic) and scaled credentialed sellers significantly.",
       "metrics": [
-        { "value": "40%", "label": "Credential Adoption Increase" },
-        { "value": "104→497", "label": "Credentialed Sellers (tracked cohort)" },
-        { "value": "6K→11K", "label": "Network-wide Credentials" }
+        {
+          "value": "40%",
+          "label": "Credential Adoption Increase"
+        },
+        {
+          "value": "104→497",
+          "label": "Credentialed Sellers (tracked cohort)"
+        },
+        {
+          "value": "6K→11K",
+          "label": "Network-wide Credentials"
+        }
       ],
       "links": []
     },
@@ -95,21 +62,113 @@
       "highlighted": true,
       "metrics": [],
       "links": [
-        { "text": "The Hindu — Guinness Record", "url": "https://www.thehindu.com/news/national/andhra-pradesh/aps-self-help-group-women-set-four-world-records-including-a-guinness-record/article69306775.ece" },
-        { "text": "Official Guinness Record", "url": "https://www.guinnessworldrecords.com/world-records/776064-most-users-in-an-e-business%C2%A0video-lesson" }
+        {
+          "text": "The Hindu — Guinness Record",
+          "url": "https://www.thehindu.com/news/national/andhra-pradesh/aps-self-help-group-women-set-four-world-records-including-a-guinness-record/article69306775.ece"
+        },
+        {
+          "text": "Official Guinness Record",
+          "url": "https://www.guinnessworldrecords.com/world-records/776064-most-users-in-an-e-business%C2%A0video-lesson"
+        }
       ]
     }
   ],
-
-  "comms": {
-    "para1": "Created the first ONDC adaptable communications — Story Books, Onboarding Flyers — for network participants, sellers, and government ministries to explain the complex concept of an open network. Led comms for high-profile events including Startup Mahakumbh, G20 Summit, and Bharat Tex.",
-    "para2": "Spearheaded the launch of the <strong>Media & Entertainment domain</strong> on the ONDC network, creating a strategic integration pipeline of 13+ organisations including HT Media, Times Network, and Nazara.",
-    "links": [
-      { "text": "Social Sector Story Book (PDF)", "url": "https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/marketing-materials/english_social_sector_handbook_feb24.pdf" },
-      { "text": "Onboarding Flyer (PDF)", "url": "https://ondc-static-website-media.s3.ap-south-1.amazonaws.com/ondc-website-media/downloads/marketing-materials/english_fleet_on_street_flyer_feb24.pdf" }
-    ]
-  },
-
+  "phase1Initiatives": [
+    {
+      "icon": "🌐",
+      "title": "National Portal — ondc.org",
+      "description": "Built and scaled the national portal across 14 languages, serving as the single point of contact for all ONDC functions. Coined the network's official tagline: \"Everyone's Commerce.\"",
+      "metrics": [
+        {
+          "value": "2M+",
+          "label": "Total Visitors"
+        },
+        {
+          "value": "69%",
+          "label": "Engagement Rate"
+        },
+        {
+          "value": "14",
+          "label": "Languages"
+        },
+        {
+          "value": "33",
+          "label": "Event Landing Pages"
+        }
+      ],
+      "links": []
+    },
+    {
+      "icon": "🎓",
+      "title": "ONDC Academy",
+      "description": "Created the education platform from scratch. Designed curriculum, coordinated with PwC and NCVET to secure Dual Awarding Body accreditation — empowering ONDC to offer end-to-end vocational education services. Certification was eventually made mandatory for network participation.",
+      "metrics": [
+        {
+          "value": "3,000+",
+          "label": "Registered Users"
+        },
+        {
+          "value": "550+",
+          "label": "Certified Participants"
+        },
+        {
+          "value": "40+",
+          "label": "Hours of Content"
+        },
+        {
+          "value": "12",
+          "label": "Languages"
+        }
+      ],
+      "links": [
+        {
+          "text": "ONDC Academy YouTube",
+          "url": "https://www.youtube.com/@ONDCAcademy"
+        },
+        {
+          "text": "NCVET Awarding Body",
+          "url": "https://ncvet.gov.in/awarding-bodies-3/"
+        }
+      ]
+    },
+    {
+      "icon": "💬",
+      "title": "ONDC Sahayak (WhatsApp Chatbot)",
+      "description": "Engineered a WhatsApp-based support chatbot for seller onboarding and query resolution. Scaled to serve the rapidly growing national user base autonomously.",
+      "metrics": [
+        {
+          "value": "17K+",
+          "label": "Unique Users"
+        },
+        {
+          "value": "85%",
+          "label": "Autonomous Resolution"
+        },
+        {
+          "value": "23K",
+          "label": "Total Responses"
+        }
+      ],
+      "links": []
+    },
+    {
+      "icon": "📱",
+      "title": "Ecosystem Adoption Tools",
+      "description": "<strong>ONDC Seller QR Code:</strong> Launched interoperable QR codes enabling 120K+ MSMEs to create discoverable digital storefronts.<br><strong>ONDC Saarthi:</strong> Designed the v1.0 developer reference app, reducing third-party integration and network onboarding time.<br><strong>Play Store Apps:</strong> Launched official ONDC support applications to combat counterfeit apps and secure the network's digital footprint.",
+      "metrics": [],
+      "links": [
+        {
+          "text": "ET Govt — QR Code Launch",
+          "url": "https://government.economictimes.indiatimes.com/news/technology/ondc-launches-interoperable-qr-code-to-empower-indian-ecommerce-sellers/112152726"
+        },
+        {
+          "text": "The Hindu — Saarthi Launch",
+          "url": "https://www.thehindu.com/sci-tech/technology/internet/ondc-launches-saarthi-reference-app-for-businesses-to-create-multilingual-buyer-apps/article68629225.ece"
+        }
+      ]
+    }
+  ],
+  "navTitle": "ONDC Case Study",
   "caseStudies": [
     {
       "badge": "Grameen Foundation",
@@ -123,5 +182,7 @@
       "url": "https://idronline.org/article/diversity-inclusion/making-ondc-accessible-for-women-led-small-enterprises/",
       "linkText": "Read Article →"
     }
-  ]
+  ],
+  "heroLabel": "Case Study · Oct 2022 – Oct 2025",
+  "heroTitle": "ONDC: Building India's Digital Commerce Infrastructure"
 }
