@@ -1,31 +1,31 @@
 {
   "sectionLabel": "Career Journey",
   "sectionTitle": "The path so far",
-  "sectionDesc": "From international operations and market research to global brand campaigns to building commerce platforms to architecting national digital infrastructure — each phase built the toolkit for the next.",
+  "sectionDesc": "From international operations and market research to global brand campaigns to building commerce platforms to architecting national digital public infrastructure - each phase built the toolkit for the next.",
   "eras": [
     {
       "dates": "2003 – 2008",
       "company": "The Foundation",
       "role": "UPS · Damac Properties · Kantar TNS · AC Nielsen · Dubai",
-      "highlights": "Started with global logistics at UPS — corporate accounts, daily operations, sales coordination. Moved to Damac Properties managing HNWI real estate clients and sales training. Research internships at Kantar TNS (RTD Beverages, MENA) and AC Nielsen (Philip Morris) built an analytical foundation. International exposure from the start."
+      "highlights": "Started with global logistics at UPS - corporate accounts, daily operations, sales coordination. Moved to Damac Properties managing HNWI real estate clients and sales training. Research internships at Kantar TNS (RTD Beverages, MENA) and AC Nielsen (Philip Morris) built an analytical foundation. International exposure from the start."
     },
     {
       "dates": "2010 – 2015",
       "company": "The Communicator",
       "role": "Ogilvy & Mather · Bates/WPP · Dubai & Bangalore",
-      "highlights": "Global campaigns for Lenovo Worldwide across Western Europe, APAC, Latin America. Luxury retail for Rivoli/Swatch Group. Learned to translate complex propositions for diverse stakeholders — a skill that later proved essential for explaining DPI to government ministries."
+      "highlights": "Global campaigns for Lenovo Worldwide across Western Europe, APAC, and Latin America. Luxury retail for Rivoli/Swatch Group. Learned to translate complex propositions for diverse stakeholders, a skill that later proved essential for explaining DPI to government ministries."
     },
     {
       "dates": "2018 – 2021",
       "company": "The Builder",
       "role": "Lit Technologies (acq. by Udaan) · Trivandrum, Kerala",
-      "highlights": "Built a B2B kirana commerce platform from scratch — product design (UI/UX), category management across 1,700 SKUs, customer operations. Generated ₹55Cr+ GMV. 100% user retention during Udaan acquisition. Designed delivery management systems tracking 12M+ kg of goods. This phase taught first-principles building and the limits of closed-loop platforms."
+      "highlights": "Built a B2B kirana commerce platform from scratch - product design (UI/UX), category management across 1,700 SKUs, and customer relations. Generated ₹55Cr+ GMV. 100% user retention during Udaan acquisition. Designed delivery management systems tracking 12M+ kg of goods. This phase taught first-principles building and the limits of closed-loop platforms."
     },
     {
       "dates": "2022 – 2025",
       "company": "The Systems Architect",
       "role": "ONDC (DPIIT, Govt. of India) · New Delhi",
-      "highlights": "Among the first 20 hires at India's national commerce protocol. Led social-sector growth and digital programs. Operationalised partnerships with MoRD, MoT, and state bodies. Built foundational tools (Academy, Sahayak, Seller QR, Saarthi). Facilitated Guinness World Record campaign. Scaled credentialed sellers across the network."
+      "highlights": "Among the first 20 hires at India's national commerce protocol. Led social-sector growth and digital programs. Operationalised partnerships with MoRD, MoT, and state bodies. Built foundational tools (National Portal, Academy, Sahayak, Seller QR, Saarthi). Facilitated Guinness World Record campaign. Scaled credentialed sellers across the network."
     }
   ]
 }
