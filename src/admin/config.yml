@@ -1,7 +1,6 @@
 backend:
-  name: github
-  repo: mrmostley/CareerPortfolio
-  branch: feature/cms-setup
+  name: git-gateway
+  branch: main
 
 media_folder: "src/assets/images/uploads"
 public_folder: "/assets/images/uploads"
