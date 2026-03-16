@@ -114,7 +114,7 @@
   "dashboard": {
     "title": "Sales Analytics Dashboard",
     "description": "Built from real operational data (Mar 2018 – May 2020). Interactive analytics covering revenue, categories, returns, margins, and customer segmentation.",
-    "note": "Note: The cumulative sales figure of ₹55Cr+ reflects the period through Oct 2020, including the post-acquisition Udaan phase. This dashboard covers the Lit Technologies operational period only.",
+    "note": "Note: The cumulative sales figure of ₹55Cr+ reflects the period through Dec 2020, including the post-acquisition Udaan phase. ",
     "embedSrc": "dashboard.html"
   },
   "sectionDesc": "Led design, category strategy, and operations for a B2B kirana marketplace, from first wireframe to ₹55Cr+ GMV and acquisition by Udaan. Every screen below was designed and shipped by me.",
