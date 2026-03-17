@@ -7,6 +7,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/dashboard.html": "dashboard.html" });
   eleventyConfig.ignores.add("src/dashboard.html");
 
+  // Standalone pages (not in nav, access by direct link only)
+  eleventyConfig.addPassthroughCopy({ "src/nari-guide.html": "nari-guide.html" });
+  eleventyConfig.ignores.add("src/nari-guide.html");
+
   return {
     dir: {
       input: "src",
